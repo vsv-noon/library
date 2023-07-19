@@ -9,23 +9,22 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Forum';
-  font-family: 'Inter', sans-serif;
-  /* background: #585c68; */
-  /* background-image: url("./img/welcome-without-overlay.jpg"); */
+  /* font-family: 'Forum';
+  font-family: 'Inter', sans-serif; */
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .header-block {
-  /* height: 90px; */
-  align-items: center;
   display: flex;
-  justify-content: start;
   background: #0C0C0E;
 }
 
@@ -62,6 +61,8 @@ h1 {
 
 a:hover {
   cursor: pointer;
+  color: grey;
+  transition: 0.3s;
 }
 
 .navigation {
@@ -72,16 +73,12 @@ a:hover {
 
 .welcome-block {
   display: flex;
-  align-items: center;
+  align-items: start;
   height: 600px;
-  width: 100%;
-  background: url(../img/welcome-without-overlay.jpg);
-}
-
-.welcome-content {
-  width: 600px;
-  background: #0C0C0E;
-  margin-top: 60px;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
+  padding-top: 220px;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
 }
 
 .welcome-h2 {
@@ -94,5 +91,113 @@ a:hover {
   line-height: 50px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 35px 40px;
+  padding: 35px 116px;
+  background: #0C0C0E;
+}
+
+.about,
+.favorites {
+  text-align: center;
+}
+
+.h2-about,
+.h2-favorites {
+  margin-top: 20px;
+  padding-bottom: 61px;
+  color: #0C0C0E;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  position: relative;
+  /* border-bottom: #000 solid; */
+}
+
+.h2-about::before,
+.h2-favorites::before {
+  content: '';
+  border: 1px solid #0C0C0E;
+  width: 50px;
+  position: absolute;
+  top: 55px;
+  left: 695px;
+  /* transform: 90deg; */
+}
+
+.p-about {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* margin-bottom: 20px; */
+}
+
+.about-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.h3-favorites {
+  color: #000;
+  text-align: left;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.caurusel-pagination {
+  margin-top: 20px;
+  margin-bottom: 37px;
+}
+
+.favorites-season {
+  /* display: flex; */
+  /* justify-content: start; */
+  /* gap: 177px; */
+}
+
+.form-favorites-season {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.favorites-season-radio-btn {
+  display: flex;
+  gap: 20px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.favorites-season-radio-btn input:checked+label {
+  font-weight: 700;
+}
+
+.favorites-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.favorites-box-item {
+  width: 550px;
+  height: 555px;
+  border: 1px solid #000;
+  background: #FFF;
+  margin-bottom: 40px;
 }

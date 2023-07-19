@@ -12,37 +12,82 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<div class="wrapper">
   <header class="header">
-    <div class="wrapper">
-      <div class="header-block">
-        <div class="header-left-column">
-          <h1>Brooklyn Public Library</h1>
-        </div>
-        <div class="header-right-column">
-          <nav class="header__navigation">
-            <ul class="navigation">
-              <li><a href="#about">About</a></li>
-              <li><a href="#favorites">Favorites</a></li>
-              <li><a href="#coffee-shop">Coffee shop</a></li>
-              <li><a href="#contacts">Contacts</a></li>
-              <li><a href="#library-card">Library Card</a></li>
-            </ul>
-          </nav>
-          <a href="#"><img src="./img/icon_profile.svg" class="profile-ico" alt="profile"></a>
-        </div>
+    <div class="header-block">
+      <div class="header-left-column">
+        <h1>Brooklyn Public Library</h1>
+      </div>
+      <div class="header-right-column">
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#coffee-shop">Coffee shop</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#library-card">Library Card</a></li>
+          </ul>
+        </nav>
+        <a href="#"><img src="./img/icon_profile.svg" class="profile-ico" alt="profile"></a>
       </div>
     </div>
   </header>
-  <section class="welcome">
-    <div class="wrapper">
+  <main class="main">
+    <section class="welcome">
       <div class="welcome-block">
-        <div class="welcome-content">
-          <h2 class="welcome-h2">Welcome <br> to the Brooklyn <br> Library</h2>
+        <h2 class="welcome-h2">Welcome <br> to the Brooklyn <br> Library</h2>
+      </div>
+    </section>
+    <section class="about">
+      <h2 class="h2-about">About</h2>
+      <p class="p-about">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+      <div class="about-block">
+        <img src="./img/slider/image-1.jpg" alt="image-1" class="img">
+        <img src="./img/slider/image-2.jpg" alt="image-2" class="img">
+        <img src="./img/slider/image-3.jpg" alt="image-3" class="img">
+      </div>
+      <img src="./img/slider/carousel-pagination.svg" alt="pagination" class="caurusel-pagination">
+    </section>
+    <section class="favorites">
+      <h2 class="h2-favorites">Favorites</h2>
+      <h3 class="h3-favorites">Pick favorites of seson</h3>
+      <form class="form-favorites-season" action="#">
+        <div class="favorites-season-radio-btn">
+          <input type="radio" name="season" value="winter" checked>
+          <label for="winter">Winter</label>
+        </div>
+        <div class="favorites-season-radio-btn">
+          <input type="radio" name="season" value="spring">
+          <label for="winter">Spring</label>
+        </div>
+        <div class="favorites-season-radio-btn">
+          <input type="radio" name="season" value="summer">
+          <label for="winter">Summer</label>
+        </div>
+        <div class="favorites-season-radio-btn">
+          <input type="radio" name="season" value="autumn">
+          <label for="winter">Autumn</label>
+        </div>
+      </form>
+      <div class="favorites-box">
+        <div class="favorites-box-item">
+
+        </div>
+        <div class="favorites-box-item">
+          
+        </div>
+        <div class="favorites-box-item">
+          
+        </div>
+        <div class="favorites-box-item">
+          
         </div>
       </div>
-    </div>
-  </section>
+
+
+    </section>
+  </main>
+</div>
 </body>
 
 </html>
