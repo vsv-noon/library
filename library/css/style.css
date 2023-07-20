@@ -100,7 +100,8 @@ a:hover {
 .about,
 .favorites,
 .coffee-shop,
-.contacts {
+.contacts,
+.library-card {
   margin: 0 20px;
   text-align: center;
 }
@@ -108,7 +109,8 @@ a:hover {
 .h2-about,
 .h2-favorites,
 .h2-coffee-shop,
-.h2-contacts {
+.h2-contacts,
+.h2-library-card {
   margin-top: 20px;
   padding-bottom: 61px;
   color: #0C0C0E;
@@ -126,7 +128,8 @@ a:hover {
 .h2-about::before,
 .h2-favorites::before,
 .h2-coffee-shop::before,
-.h2-contacts::before {
+.h2-contacts::before,
+.h2-library-card::before {
   content: '';
   border: 1px solid #0C0C0E;
   width: 50px;
@@ -428,6 +431,10 @@ input:hover {
   text-transform: capitalize;
 }
 
+.contacts {
+  margin-bottom: 58px;
+}
+
 .contacts-box {
   display: flex;
 }
@@ -472,35 +479,143 @@ input:hover {
 .h3-contacts-staff {
   margin-bottom: 20px;
   color: #000;
-text-align: center;
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 40px; /* 200% */
-letter-spacing: 2px;
-text-transform: capitalize;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .p-contacts {
   color: #000;
-text-align: center;
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 40px; /* 200% */
-letter-spacing: 2px;
-text-transform: capitalize;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .p-contacts span {
   color: #000;
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 40px;
-letter-spacing: 2px;
-text-transform: capitalize;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.library-card-box {
+  display: flex;
+}
+
+.library-card-box-left-column {
+  width: 50%;
+  text-align-last: center;
+}
+
+.library-card-box-right-column {
+  width: 50%;
+  text-align-last: right;
+}
+
+.h3-library-card-left-column {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-bottom: 30px;
+}
+
+.h3-library-card-right-column {
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.check-the-card-form {
+  width: 600px;
+  height: 386px;
+  flex-shrink: 0;
+  border: 3px solid #BB945F;
+  background: #FFF;
+  margin-bottom: 41px;
+}
+
+.check-the-card-form-inner-block {
+  margin: 20px 20px;
+  width: 560px;
+  height: 272px;
+  flex-shrink: 0;
+  background: #BB945F;
+}
+
+.check-the-card-form-inner-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.h3-chek-the-card-form {
+  margin: 20px 246px 5px 20px;
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+.input-check-the-card-form {
+  margin: 12px 20px;
+  width: 520px;
+  height: 66px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.btn-check-the-card {
+  width: 242px;
+  height: 44px;
+  /* display: inline-flex; */
+  padding: 10px 40px;
+  /* align-items: flex-end; */
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background: #FFF;
+}
+
+.btn-check-the-card:hover {
+  cursor: pointer;
+}
+
+.p-library-card-box-right-column {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 0.4px;
 }
