@@ -98,12 +98,17 @@ a:hover {
 }
 
 .about,
-.favorites {
+.favorites,
+.coffee-shop,
+.contacts {
+  margin: 0 20px;
   text-align: center;
 }
 
 .h2-about,
-.h2-favorites {
+.h2-favorites,
+.h2-coffee-shop,
+.h2-contacts {
   margin-top: 20px;
   padding-bottom: 61px;
   color: #0C0C0E;
@@ -119,13 +124,15 @@ a:hover {
 }
 
 .h2-about::before,
-.h2-favorites::before {
+.h2-favorites::before,
+.h2-coffee-shop::before,
+.h2-contacts::before {
   content: '';
   border: 1px solid #0C0C0E;
   width: 50px;
   position: absolute;
   top: 59px;
-  left: 695px;
+  left: 675px;
   /* transform: 90deg; */
 }
 
@@ -143,7 +150,7 @@ a:hover {
 .about-block {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .caurusel-pagination {
@@ -159,14 +166,14 @@ a:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 0 20px 40px 20px;
+  margin-bottom: 40px;
 }
 
 .form-favorites-season {
   display: flex;
   justify-content: space-between;
   width: 700px;
-  margin: 0 20px 40px;
+  margin-bottom: 40px;
 }
 
 .favorites-season-radio-btn {
@@ -203,7 +210,7 @@ input:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 60px 0 20px;
+  margin-right: 40px;
   box-sizing: border-box;
 }
 
@@ -309,4 +316,114 @@ input:hover {
   border: 1px solid #BB945F;
   color: #BB945F;
   background: #fff;
+}
+
+.h2-coffee-shop {
+  text-align: center;
+}
+
+.p-coffee-shop {
+  /* text-align: left; */
+  color: #000;
+  /* text-align: center; */
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.coffee-shop-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.coffee-shop-box-left-column {
+  width: 438px;
+  text-align: left;
+}
+
+.coffee-shop-box-right-column {
+  width: 500px;
+  text-align: right;
+}
+
+.h2-coffee-shop-table {
+  margin-bottom: 40px;
+}
+
+.coffee-shop-box-left-column ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.coffee-shop-box-right-column ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.coffee-shop-dish {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.coffee-shop-line {
+  width: 100px;
+  margin-top: 20px;
+  /* padding-right: 50px; */
+  /* margin: 20px 60px 20px 20px; */
+  height: 1px;
+  background: #BB945F;
+  /* position: relative; */
+}
+
+/* .span-coffee-shop-line {
+  padding: auto;
+  bottom: -15px;
+  left: 0;
+  height: 100%;
+} */
+
+.h2-coffee-shop-box {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.coffee-shop-dish {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.coffee-shop-price {
+  color: #000;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
