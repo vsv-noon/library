@@ -61,6 +61,10 @@ h1 {
   line-height: 50px;
 }
 
+a {
+  color: #000;
+}
+
 a:hover {
   cursor: pointer;
   color: grey;
@@ -516,16 +520,17 @@ input:hover {
 
 .library-card-box {
   display: flex;
+  justify-content: space-between;
 }
 
 .library-card-box-left-column {
   width: 50%;
-  text-align-last: center;
+  text-align: center;
 }
 
 .library-card-box-right-column {
-  width: 50%;
-  text-align-last: right;
+  width: 33%;
+  text-align: right;
 }
 
 .h3-library-card-left-column {
@@ -537,16 +542,6 @@ input:hover {
   line-height: normal;
   letter-spacing: 0.6px;
   margin-bottom: 30px;
-}
-
-.h3-library-card-right-column {
-  color: #000;
-  font-family: Forum;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.6px;
 }
 
 .check-the-card-form {
@@ -597,15 +592,34 @@ input:hover {
   width: 242px;
   height: 44px;
   /* display: inline-flex; */
-  padding: 10px 40px;
+  padding: 10px 0;
   /* align-items: flex-end; */
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   background: #FFF;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
 }
 
 .btn-check-the-card:hover {
   cursor: pointer;
+}
+
+.h3-library-card-right-column {
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-bottom: 35px;
 }
 
 .p-library-card-box-right-column {
@@ -618,4 +632,99 @@ input:hover {
   line-height: 40px;
   /* 200% */
   letter-spacing: 0.4px;
+  margin-bottom: 35px;
+}
+
+.btn-log-in {
+  margin-left: 20px;
+}
+
+.btn-sign-up,
+.btn-log-in {
+  width: 75px;
+  height: 30px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  width: 75px;
+  height: 30px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background: #fff;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.footer {
+  /* height: 250px; */
+  padding: 20px 20px 44px 20px;
+  background: #0C0C0E;
+  color: #fff;
+}
+
+.p-footer-left-column {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 133.333% */
+}
+
+.p-footer-right-column {
+  color: #FFF;
+  text-align: right;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 133.333% */
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.footer-ul {
+  display: flex;
+  gap: 15px;
+  /* margin-bottom: 10px; */
+}
+
+.footer-middle-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 30px;
+  margin-bottom: 44px;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-footer-bottom-row {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+  letter-spacing: 2px;
 }
