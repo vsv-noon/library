@@ -151,18 +151,55 @@ a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* margin-bottom: 20px; */
 }
 
-.about-block {
+.slider {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 31px;
 }
 
-.caurusel-pagination {
-  margin-top: 20px;
-  margin-bottom: 37px;
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 55px auto;
+  /* margin-bottom: 37px; */
+}
+
+.btn-pagination {
+  display: flex;
+  /* margin: 0 auto; */
+  /* display: block; */
+  align-items: center;
+  width: 26px;
+  height: 26px;
+}
+
+.btn-pagination input {
+  display: none;
+}
+
+.manual-btn {
+  align-items: center;
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-pagination input {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.btn-pagination input:checked+label {
+  background-color: #BB945F;
+  transition: 0.3s ease-in-out;
 }
 
 .h3-favorites {
@@ -310,6 +347,7 @@ input:hover {
 .btn-buy:hover {
   cursor: pointer;
   background: #BB945F;
+  transition: 0.3s;
 }
 
 .btn-own {
@@ -524,7 +562,7 @@ input:hover {
 }
 
 .library-card-box-left-column {
-  width: 50%;
+  width: 600px;
   text-align: center;
 }
 
@@ -609,6 +647,8 @@ input:hover {
 
 .btn-check-the-card:hover {
   cursor: pointer;
+  background: #BB945F;
+  transition: 0.3s;
 }
 
 .h3-library-card-right-column {
@@ -662,6 +702,13 @@ input:hover {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+}
+
+.btn-sign-up:hover,
+.btn-log-in:hover {
+  cursor: pointer;
+  background: #BB945F;
+  transition: 0.3s;
 }
 
 .footer {
