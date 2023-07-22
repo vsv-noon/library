@@ -25,9 +25,13 @@ body {
   background: #FFF;
 }
 
+header {
+  width: 100%;
+  background: #0C0C0E;
+}
+
 .header-block {
   display: flex;
-  background: #0C0C0E;
 }
 
 .header-left-column {
@@ -77,6 +81,10 @@ a:hover {
   text-decoration: none;
 }
 
+.welcome {
+  width: 100%;
+}
+
 .welcome-block {
   display: flex;
   align-items: start;
@@ -84,7 +92,7 @@ a:hover {
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
   padding-top: 220px;
   background-repeat: no-repeat;
-  /* background-size: contain; */
+  /* background-size: cover; */
 }
 
 .welcome-h2 {
@@ -129,7 +137,7 @@ a:hover {
   /* border-bottom: #000 solid; */
 }
 
-.h2-about::before,
+/* .h2-about::before,
 .h2-favorites::before,
 .h2-coffee-shop::before,
 .h2-contacts::before,
@@ -140,7 +148,20 @@ a:hover {
   position: absolute;
   top: 59px;
   left: 675px;
-  /* transform: 90deg; */
+  transform: 90deg;
+} */
+
+.h2-about::after,
+.h2-favorites::after,
+.h2-coffee-shop::after,
+.h2-contacts::after,
+.h2-library-card::after {
+  content: '';
+  border: 1px solid #0C0C0E;
+  width: 50px;
+  position: absolute;
+  bottom: 39px;
+  left: 675px;
 }
 
 .p-about {
@@ -155,6 +176,7 @@ a:hover {
 
 .slider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 31px;
@@ -174,16 +196,17 @@ a:hover {
   align-items: center;
   width: 26px;
   height: 26px;
+  padding: 5px;
 }
 
-.btn-pagination input {
-  display: none;
+input[type="radio"]:hover {
+  cursor: pointer;
 }
 
 .manual-btn {
   align-items: center;
   display: block;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -192,9 +215,11 @@ a:hover {
 }
 
 .btn-pagination input {
+  /* padding: 5px; */
+  display: none;
   width: 26px;
   height: 26px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn-pagination input:checked+label {
@@ -222,6 +247,7 @@ a:hover {
 
 .favorites-season-radio-btn {
   display: flex;
+  align-items: center;
   width: 116px;
   gap: 20px;
   color: #000;
@@ -231,20 +257,22 @@ a:hover {
   font-weight: 400;
   line-height: normal;
   accent-color: black;
+  cursor: pointer;
 }
 
-input {
-  /* width: 17px;
+.favorites-season-radio-btn input {
+  width: 17px;
   height: 17px;
-  outline-style: auto;
+  /* outline-style: auto;
   border-radius: 50%;
   appearance: none;
   outline: solid 2px; */
 }
 
-input:hover {
-  cursor: pointer;
+.favorites-season-radio-btn input+label {
+  /* cursor: pointer; */
 }
+
 
 .favorites-season-radio-btn input:checked+label {
   font-weight: 700;
@@ -275,6 +303,7 @@ input:hover {
 }
 
 .h3-favorites-box {
+  position: relative;
   margin-top: 15px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -287,6 +316,15 @@ input:hover {
   /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
+}
+
+.h3-favorites-box::after {
+  content: '';
+  width: 60px;
+  border: 1px solid #BB945F;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .h4-favorites-box-title {
@@ -384,6 +422,7 @@ input:hover {
 
 .coffee-shop-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
@@ -479,6 +518,7 @@ input:hover {
 
 .contacts-box {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts-box ul {
@@ -559,6 +599,7 @@ input:hover {
 .library-card-box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .library-card-box-left-column {
@@ -624,6 +665,27 @@ input:hover {
   border: none;
   border-radius: 10px;
   background: #FFF;
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  /* 166.667% */
+  letter-spacing: 0.6px;
+  padding-left: 20px;
+}
+
+.input-check-the-card-form::placeholder {
+  color: #8E8E8E;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  /* 166.667% */
+  letter-spacing: 0.6px;
+  /* padding-left: 20px; */
 }
 
 .btn-check-the-card {
@@ -761,12 +823,15 @@ input:hover {
 
 .footer-bottom-row {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  /* gap: 400px; */
+  /* justify-content: space-between; */
 }
 
 .p-footer-bottom-row {
+  width: 45%;
   color: #FFF;
-  text-align: center;
+  /* text-align: center; */
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
