@@ -235,20 +235,20 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .form-favorites-season {
   display: flex;
   justify-content: space-between;
-  width: 700px;
-  margin-bottom: 40px;
+  width: 704px;
+  margin-bottom: 35px;
 }
 
-.favorites-season-radio-btn {
+.favorites-label {
   display: flex;
   align-items: center;
-  width: 116px;
+  width: 125px;
   gap: 20px;
   color: #000;
   font-family: Inter;
@@ -260,21 +260,33 @@ input[type="radio"]:hover {
   cursor: pointer;
 }
 
-.favorites-season-radio-btn input {
+.favorites-label:first-child {
+  padding: 5px 0 5px 0;
+}
+
+.favorites-label:nth-child(2) {
+  padding: 5px 0 5px 5px;
+}
+
+.favorites-label:nth-child(3) {
+  padding: px 0 5px 0px;
+}
+
+.favorites-label:last-child {
+  padding: 5px 0 5px 10px;
+}
+
+.favorites-label input {
   width: 17px;
   height: 17px;
-  /* outline-style: auto;
+  /* border: 2px solid black;
+  outline-style: auto;
   border-radius: 50%;
   appearance: none;
   outline: solid 2px; */
 }
 
-.favorites-season-radio-btn input+label {
-  /* cursor: pointer; */
-}
-
-
-.favorites-season-radio-btn input:checked+label {
+.favorites-label input:checked~span {
   font-weight: 700;
 }
 
