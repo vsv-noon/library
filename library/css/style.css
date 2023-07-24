@@ -14,8 +14,6 @@ html {
 }
 
 body {
-  /* font-family: 'Forum';
-  font-family: 'Inter', sans-serif; */
   background-color: gray;
 }
 
@@ -67,12 +65,13 @@ h1 {
 
 a {
   color: #000;
+  cursor: pointer;
 }
 
 a:hover {
   cursor: pointer;
   color: grey;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
 
 .navigation {
@@ -92,7 +91,6 @@ a:hover {
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
   padding-top: 220px;
   background-repeat: no-repeat;
-  /* background-size: cover; */
 }
 
 .welcome-h2 {
@@ -134,22 +132,7 @@ a:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
   position: relative;
-  /* border-bottom: #000 solid; */
 }
-
-/* .h2-about::before,
-.h2-favorites::before,
-.h2-coffee-shop::before,
-.h2-contacts::before,
-.h2-library-card::before {
-  content: '';
-  border: 1px solid #0C0C0E;
-  width: 50px;
-  position: absolute;
-  top: 59px;
-  left: 675px;
-  transform: 90deg;
-} */
 
 .h2-about::after,
 .h2-favorites::after,
@@ -186,13 +169,10 @@ a:hover {
   display: flex;
   justify-content: center;
   margin: 20px auto 55px auto;
-  /* margin-bottom: 37px; */
 }
 
 .btn-pagination {
   display: flex;
-  /* margin: 0 auto; */
-  /* display: block; */
   align-items: center;
   width: 26px;
   height: 26px;
@@ -206,25 +186,29 @@ input[type="radio"]:hover {
 .manual-btn {
   align-items: center;
   display: block;
-  /* cursor: pointer; */
+  cursor: pointer;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #000;
   transition: 0.3s ease-in-out;
+  padding: 5px;
 }
 
 .btn-pagination input {
-  /* padding: 5px; */
   display: none;
   width: 26px;
   height: 26px;
-  /* cursor: pointer; */
+}
+
+.btn-pagination {
+  padding: 5px;
 }
 
 .btn-pagination input:checked+label {
   background-color: #BB945F;
   transition: 0.3s ease-in-out;
+  padding: 5px;
 }
 
 .h3-favorites {
@@ -279,11 +263,6 @@ input[type="radio"]:hover {
 .favorites-label input {
   width: 17px;
   height: 17px;
-  /* border: 2px solid black;
-  outline-style: auto;
-  border-radius: 50%;
-  appearance: none;
-  outline: solid 2px; */
 }
 
 .favorites-label input:checked~span {
@@ -325,7 +304,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -341,14 +319,12 @@ input[type="radio"]:hover {
 
 .h4-favorites-box-title {
   margin-left: 20px;
-  /* margin-bottom: 20px; */
   color: #000;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  /* 266.667% */
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -376,7 +352,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 266.667% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -386,7 +361,6 @@ input[type="radio"]:hover {
   height: 30px;
   margin-left: 20px;
   position: absolute;
-  /* left: 20px; */
   bottom: 15px;
   flex-shrink: 0;
   border-radius: 2px;
@@ -397,7 +371,7 @@ input[type="radio"]:hover {
 .btn-buy:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
 
 .btn-own {
@@ -418,15 +392,12 @@ input[type="radio"]:hover {
 }
 
 .p-coffee-shop {
-  /* text-align: left; */
   color: #000;
-  /* text-align: center; */
   font-family: Inter;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 40px;
@@ -442,6 +413,10 @@ input[type="radio"]:hover {
 .coffee-shop-box-left-column {
   width: 438px;
   text-align: left;
+}
+
+.coffee-shop-box-left-column .coffee-shop-price {
+  margin-left: 25px;
 }
 
 .coffee-shop-box-right-column {
@@ -473,19 +448,9 @@ input[type="radio"]:hover {
 .coffee-shop-line {
   width: 100px;
   margin-top: 20px;
-  /* padding-right: 50px; */
-  /* margin: 20px 60px 20px 20px; */
   height: 1px;
   background: #BB945F;
-  /* position: relative; */
 }
-
-/* .span-coffee-shop-line {
-  padding: auto;
-  bottom: -15px;
-  left: 0;
-  height: 100%;
-} */
 
 .h2-coffee-shop-box {
   color: #BB945F;
@@ -494,7 +459,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 100% */
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 40px;
@@ -507,7 +471,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -519,13 +482,12 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
 
 .contacts {
-  margin-bottom: 58px;
+  margin-bottom: 56px;
 }
 
 .contacts-box {
@@ -546,7 +508,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -565,7 +526,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -579,7 +539,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -592,7 +551,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -645,7 +603,7 @@ input[type="radio"]:hover {
 }
 
 .check-the-card-form-inner-block {
-  margin: 20px 20px;
+  margin: 17px 20px 20px 17px;
   width: 560px;
   height: 272px;
   flex-shrink: 0;
@@ -665,16 +623,16 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  /* 166.667% */
   letter-spacing: 0.6px;
 }
 
 .input-check-the-card-form {
-  margin: 12px 20px;
+  margin: 15px 20px 10px 20px;
   width: 520px;
   height: 66px;
   flex-shrink: 0;
   border: none;
+  outline: none;
   border-radius: 10px;
   background: #FFF;
   color: #BB945F;
@@ -683,7 +641,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  /* 166.667% */
   letter-spacing: 0.6px;
   padding-left: 20px;
 }
@@ -695,17 +652,13 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  /* 166.667% */
   letter-spacing: 0.6px;
-  /* padding-left: 20px; */
 }
 
 .btn-check-the-card {
   width: 242px;
   height: 44px;
-  /* display: inline-flex; */
   padding: 10px 0;
-  /* align-items: flex-end; */
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   background: #FFF;
@@ -722,7 +675,7 @@ input[type="radio"]:hover {
 .btn-check-the-card:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
 
 .h3-library-card-right-column {
@@ -744,7 +697,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 0.4px;
   margin-bottom: 35px;
 }
@@ -757,8 +709,6 @@ input[type="radio"]:hover {
 .btn-log-in {
   width: 75px;
   height: 30px;
-  /* display: flex; */
-  /* flex-direction: row; */
   width: 75px;
   height: 30px;
   padding: 10px 0px;
@@ -782,11 +732,10 @@ input[type="radio"]:hover {
 .btn-log-in:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
 
 .footer {
-  /* height: 250px; */
   padding: 20px 20px 44px 20px;
   background: #0C0C0E;
   color: #fff;
@@ -799,7 +748,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 133.333% */
 }
 
 .p-footer-right-column {
@@ -810,7 +758,6 @@ input[type="radio"]:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 133.333% */
 }
 
 .footer-top-row {
@@ -822,33 +769,36 @@ input[type="radio"]:hover {
 .footer-ul {
   display: flex;
   gap: 15px;
-  /* margin-bottom: 10px; */
 }
 
 .footer-middle-row {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #fff;
-  padding-bottom: 30px;
-  margin-bottom: 44px;
+  padding-bottom: 29px;
+  margin-bottom: 45px;
+}
+
+.footer-ul {
+  padding-top: 8px;
 }
 
 .footer-bottom-row {
   display: flex;
   width: 100%;
-  /* gap: 400px; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .p-footer-bottom-row {
-  width: 45%;
   color: #FFF;
-  /* text-align: center; */
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 100% */
   letter-spacing: 2px;
+}
+
+.p-footer-bottom-row-left {
+  margin-right: 165px;
 }

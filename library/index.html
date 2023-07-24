@@ -76,7 +76,7 @@
           </label>
           <label class="favorites-label" for="spring">
             <input type="radio" id="spring" name="season" value="spring">
-            <span>Srping</span>
+            <span>Spring</span>
           </label>
           <label class="favorites-label" for="summer">
             <input type="radio" id="summer" name="season" value="summer">
@@ -153,7 +153,7 @@
             <li>
               <div class="coffee-shop-dish">Espresso</div>
               <div class="coffee-shop-line"></div>
-              <div class="coffee-shop-price">$5</div>
+              <div class="coffee-shop-price">$2</div>
             </li>
             <li>
               <div class="coffee-shop-dish">Cappuccino</div>
@@ -237,18 +237,20 @@
           <form class="check-the-card-form">
             <div class="check-the-card-form-inner-block">
               <h3 class="h3-chek-the-card-form">Brooklyn Public Library</h3>
-              <input class="input-check-the-card-form" type="text" placeholder="Reader's name">
-              <input class="input-check-the-card-form" type="text" placeholder="Card number">
+              <input class="input-check-the-card-form" type="text" placeholder="Reader's name" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
+              <input class="input-check-the-card-form" type="text" placeholder="Card number" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
             </div>
             <button class="btn-check-the-card">Check the card</button>
           </form>
         </div>
         <div class="library-card-box-right-column">
-          <h3 class="h3-library-card-right-column">Get a reader Cards</h3>
+          <h3 class="h3-library-card-right-column">Get a reader card</h3>
           <div class="p-library-card-box-right-column">You will be able to see a reader card after logging into account
             or you can register a new account</div>
-          <button class="btn-sign-up">Sign Up</button>
-          <button class="btn-log-in">Log in</button>
+            <div class="btn-right-column-box">
+              <button class="btn-sign-up">Sign Up</button>
+              <button class="btn-log-in">Log in</button>
+            </div>
         </div>
       </div>
     </section>
@@ -269,9 +271,9 @@
     </div>
 
     <div class="footer-bottom-row">
-      <p class="p-footer-bottom-row">2023</p>
-      <a href="https://rs.school/js-stage0/ " class="p-footer-bottom-row">The Rolling Scopes School</a>
-      <p><a href="https://github.com/ViacheslavAnisimov" class="p-footer-bottom-row">ViacheslavAnisimov</a></p>
+      <p class="p-footer-bottom-row p-footer-bottom-row-left">2023</p>
+      <a href="https://rs.school/js-stage0/ " class="p-footer-bottom-row p-footer-bottom-row-center">The Rolling Scopes School</a>
+      <p><a href="https://github.com/ViacheslavAnisimov" class="p-footer-bottom-row p-footer-bottom-row-right">ViacheslavAnisimov</a></p>
 
     </div>
 
