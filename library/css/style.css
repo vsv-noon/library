@@ -73,7 +73,7 @@ a {
 a:hover {
   cursor: pointer;
   color: grey;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 
 .navigation {
@@ -182,44 +182,31 @@ a:hover {
   margin: 20px auto 55px auto;
 }
 
-.btn-pagination {
+.slider-manual-btn input {
+  display: none;
+}
+
+.slider-manual-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 26px;
   height: 26px;
-  padding: 5px;
+  border-radius: 50%;
 }
 
-input[type="radio"]:hover {
-  cursor: pointer;
-}
-
-.manual-btn {
-  align-items: center;
-  display: block;
-  cursor: pointer;
+.slider-manual-btn span {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #000;
   transition: 0.3s ease-in-out;
-  padding: 5px;
 }
 
-.btn-pagination input {
-  display: none;
-  width: 26px;
-  height: 26px;
-}
-
-.btn-pagination {
-  padding: 5px;
-}
-
-.btn-pagination input:checked+label {
+.slider-manual-btn input:checked~span {
   background-color: #BB945F;
   transition: 0.3s ease-in-out;
-  padding: 5px;
 }
 
 .h3-favorites {
@@ -382,7 +369,7 @@ input[type="radio"]:hover {
 .btn-buy:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-own {
@@ -686,7 +673,7 @@ input[type="radio"]:hover {
 .btn-check-the-card:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 
 .h3-library-card-right-column {
@@ -743,7 +730,7 @@ input[type="radio"]:hover {
 .btn-log-in:hover {
   cursor: pointer;
   background: #BB945F;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 
 .footer {
