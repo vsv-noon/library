@@ -261,6 +261,7 @@ a:hover {
 .favorites-label input {
   width: 17px;
   height: 17px;
+  cursor: pointer;
 }
 
 .favorites-label input:checked~span {
