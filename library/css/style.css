@@ -30,6 +30,8 @@ header {
 
 .header-block {
   display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .header-left-column {
@@ -82,15 +84,19 @@ a:hover {
 
 .welcome {
   width: 100%;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
+  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 
 .welcome-block {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: start;
   height: 600px;
-  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
   padding-top: 220px;
-  background-repeat: no-repeat;
 }
 
 .welcome-h2 {
@@ -132,6 +138,11 @@ a:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
   position: relative;
+}
+
+.h2-about {
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .h2-about::after,
@@ -736,8 +747,13 @@ input[type="radio"]:hover {
 }
 
 .footer {
-  padding: 20px 20px 44px 20px;
   background: #0C0C0E;
+}
+
+.footer-block {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 20px 44px 20px;
   color: #fff;
 }
 

@@ -12,33 +12,33 @@
   <link rel="icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
-<div class="wrapper">
-  <header class="header">
-    <div class="header-block">
-      <div class="header-left-column">
-        <h1>Brooklyn Public Library</h1>
-      </div>
-      <div class="header-right-column">
-        <nav class="header__navigation">
-          <ul class="navigation">
-            <li><a href="#about">About</a></li>
-            <li><a href="#favorites">Favorites</a></li>
-            <li><a href="#coffee-shop">Coffee shop</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="#library-card">Library Card</a></li>
-          </ul>
-        </nav>
-        <a href="#"><img src="./img/icon_profile.svg" class="profile-ico" alt="profile"></a>
-      </div>
+<header class="header">
+  <div class="header-block">
+    <div class="header-left-column">
+      <h1>Brooklyn Public Library</h1>
     </div>
-  </header>
-  <main class="main">
-    <section class="welcome">
-      <div class="welcome-block">
-        <h2 class="welcome-h2">Welcome <br>to the Brooklyn <br> Library</h2>
-      </div>
-    </section>
+    <div class="header-right-column">
+      <nav class="header__navigation">
+        <ul class="navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+          <li><a href="#coffee-shop">Coffee shop</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#library-card">Library Card</a></li>
+        </ul>
+      </nav>
+      <a href="#"><img src="./img/icon_profile.svg" class="profile-ico" alt="profile"></a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="welcome">
+    <div class="welcome-block">
+      <h2 class="welcome-h2">Welcome <br>to the Brooklyn <br> Library</h2>
+    </div>
+  </section>
+  <div class="wrapper">
     <section id="about" class="about">
       <h2 class="h2-about">About</h2>
       <p class="p-about">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
@@ -49,43 +49,43 @@
         <div class="slide first"><img src="./img/slider/image-3.jpg" alt="image-3" class="img"></div>
       </div>
       <!-- <img src="./img/slider/carousel-pagination.svg" alt="pagination" class="caurusel-pagination"> -->
-    <div class="slider-pagination">
-      <div class="btn-pagination">
-        <input type="radio" name="slider-btn" id="radio1" checked>
-        <label for="radio1" class="manual-btn">
-          <!-- <input type="radio" name="slider-btn" id="radio1" checked> -->
-        </label>
+      <div class="slider-pagination">
+        <div class="btn-pagination">
+          <input type="radio" name="slider-btn" id="radio1" checked>
+          <label for="radio1" class="manual-btn">
+            <!-- <input type="radio" name="slider-btn" id="radio1" checked> -->
+          </label>
+        </div>
+        <div class="btn-pagination">
+          <input type="radio" name="slider-btn" id="radio2">
+          <label for="radio2" class="manual-btn"></label>
+        </div>
+        <div class="btn-pagination">
+          <input type="radio" name="slider-btn" id="radio3">
+          <label for="radio3" class="manual-btn"></label>
+        </div>
       </div>
-      <div class="btn-pagination">
-        <input type="radio" name="slider-btn" id="radio2">
-        <label for="radio2" class="manual-btn"></label>
-      </div>
-      <div class="btn-pagination">
-        <input type="radio" name="slider-btn" id="radio3">
-        <label for="radio3" class="manual-btn"></label>
-      </div>
-    </div>
     </section>
     <section id="favorites" class="favorites">
       <h2 class="h2-favorites">Favorites</h2>
       <h3 class="h3-favorites">Pick favorites of season</h3>
       <form class="form-favorites-season" action="#">
-          <label class="favorites-label" for="winter">
-            <input type="radio" id="winter" name="season" value="winter" checked>
-            <span>Winter</span>
-          </label>
-          <label class="favorites-label" for="spring">
-            <input type="radio" id="spring" name="season" value="spring">
-            <span>Spring</span>
-          </label>
-          <label class="favorites-label" for="summer">
-            <input type="radio" id="summer" name="season" value="summer">
-            <span>Summer</span>
-          </label>
-          <label class="favorites-label" for="autumn">
-            <input id="autumn" type="radio" name="season" value="autumn">
-            <span>Autumn</span>
-          </label>
+        <label class="favorites-label" for="winter">
+          <input type="radio" id="winter" name="season" value="winter" checked>
+          <span>Winter</span>
+        </label>
+        <label class="favorites-label" for="spring">
+          <input type="radio" id="spring" name="season" value="spring">
+          <span>Spring</span>
+        </label>
+        <label class="favorites-label" for="summer">
+          <input type="radio" id="summer" name="season" value="summer">
+          <span>Summer</span>
+        </label>
+        <label class="favorites-label" for="autumn">
+          <input id="autumn" type="radio" name="season" value="autumn">
+          <span>Autumn</span>
+        </label>
       </form>
       <div class="favorites-box">
         <div class="favorites-box-item">
@@ -222,7 +222,8 @@
             <li>Putterham Library: <a href="tel:6177302385">(617) 730-2385</a></li>
           </ul>
           <h2 class="h3-contacts-staff">Senior Staff</h2>
-          <p class="p-contacts">Library Director: <a href="mailto:AmandaHirst@gmail.com"><span class="span-contacts">Amanda Hirst</span></a></p>
+          <p class="p-contacts">Library Director: <a href="mailto:AmandaHirst@gmail.com"><span
+                class="span-contacts">Amanda Hirst</span></a></p>
         </div>
         <div class="contacts-box-right-column">
           <img src="./img/map.jpg" alt="Map" class="contacts-map">
@@ -237,8 +238,10 @@
           <form class="check-the-card-form">
             <div class="check-the-card-form-inner-block">
               <h3 class="h3-chek-the-card-form">Brooklyn Public Library</h3>
-              <input class="input-check-the-card-form" type="text" placeholder="Reader's name" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
-              <input class="input-check-the-card-form" type="text" placeholder="Card number" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
+              <input class="input-check-the-card-form" type="text" placeholder="Reader's name"
+                pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
+              <input class="input-check-the-card-form" type="text" placeholder="Card number"
+                pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and '-'" required>
             </div>
             <button class="btn-check-the-card">Check the card</button>
           </form>
@@ -247,16 +250,19 @@
           <h3 class="h3-library-card-right-column">Get a reader card</h3>
           <div class="p-library-card-box-right-column">You will be able to see a reader card after logging into account
             or you can register a new account</div>
-            <div class="btn-right-column-box">
-              <button class="btn-sign-up">Sign Up</button>
-              <button class="btn-log-in">Log in</button>
-            </div>
+          <div class="btn-right-column-box">
+            <button class="btn-sign-up">Sign Up</button>
+            <button class="btn-log-in">Log in</button>
+          </div>
         </div>
       </div>
     </section>
-  </main>
+  </div>
+</main>
 
-  <footer class="footer">
+
+<footer class="footer">
+  <div class="footer-block">
     <div class="footer-top-row">
       <p class="p-footer-left-column">286 Cadman Plaza, New York,<br> NY 11238, United States</p>
       <p class="p-footer-right-column">Mon - Fri<br>08:00 am - 07:00 pm</p>
@@ -269,16 +275,15 @@
       </ul>
       <p class="p-footer-right-column">Sat - Sun<br>10:00 am - 06:00 pm</p>
     </div>
-
     <div class="footer-bottom-row">
       <p class="p-footer-bottom-row p-footer-bottom-row-left">2023</p>
-      <a href="https://rs.school/js-stage0/ " class="p-footer-bottom-row p-footer-bottom-row-center">The Rolling Scopes School</a>
-      <p><a href="https://github.com/ViacheslavAnisimov" class="p-footer-bottom-row p-footer-bottom-row-right">ViacheslavAnisimov</a></p>
-
+      <a href="https://rs.school/js-stage0/ " class="p-footer-bottom-row p-footer-bottom-row-center">The Rolling Scopes
+        School</a>
+      <p><a href="https://github.com/ViacheslavAnisimov"
+          class="p-footer-bottom-row p-footer-bottom-row-right">ViacheslavAnisimov</a></p>
     </div>
-
-  </footer>
-</div>
+  </div>
+</footer>
 </body>
 
 </html>
