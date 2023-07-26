@@ -229,6 +229,22 @@ svg:hover path {
   margin-bottom: 35px;
 }
 
+.favorites-box.winter {
+  /* display: none; */
+}
+
+.favorites-box.spring {
+  display: none;
+}
+
+.favorites-box.summer {
+  display: none;
+}
+
+.favorites-box.autumn {
+  display: none;
+}
+
 .form-favorites-season {
   display: flex;
   justify-content: space-between;
