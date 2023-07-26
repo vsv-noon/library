@@ -27,7 +27,6 @@
           <li><a href="#library-card">Library Card</a></li>
         </ul>
       </nav>
-      <!-- <a href="#"><img src="./img/icon_profile.svg" class="profile-ico" alt="profile"></a> -->
       <a href="#">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -51,21 +50,23 @@
       <p class="p-about">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
       </p>
       <div class="slider">
-        <div class="slide first"><img src="./img/slider/image-1.jpg" alt="image-1" class="img"></div>
-        <div class="slide first"><img src="./img/slider/image-2.jpg" alt="image-2" class="img"></div>
-        <div class="slide first"><img src="./img/slider/image-3.jpg" alt="image-3" class="img"></div>
+        <div id="slide1" class="slide first"><img src="./img/slider/image-1.jpg" alt="image-1" class="img"></div>
+        <div id="slide2" class="slide second"><img src="./img/slider/image-2.jpg" alt="image-2" class="img"></div>
+        <div id="slide3" class="slide third"><img src="./img/slider/image-3.jpg" alt="image-3" class="img"></div>
+        <div id="slide4" class="slide fourth"><img src="./img/slider/image-4.jpg" alt="image-3" class="img"></div>
+        <div id="slide5" class="slide fifth"><img src="./img/slider/image-5.jpg" alt="image-3" class="img"></div>
       </div>
       <div class="slider-pagination">
-        <label for="radio1" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="radio1" checked>
+        <label for="slider-radio1" class="slider-manual-btn">
+          <input type="radio" name="slider-btn" id="slider-radio1" checked>
           <span></span>
         </label>
-        <label for="radio2" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="radio2">
+        <label for="slider-radio2" class="slider-manual-btn">
+          <input type="radio" name="slider-btn" id="slider-radio2">
           <span></span>
         </label>
-        <label for="radio3" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="radio3">
+        <label for="slider-radio3" class="slider-manual-btn">
+          <input type="radio" name="slider-btn" id="slider-radio3">
           <span></span>
         </label>
       </div>
@@ -75,11 +76,17 @@
       <h3 class="h3-favorites">Pick favorites of season</h3>
       <form class="form-favorites-season" action="#">
         <label id="winter-label" class="favorites-label" for="winter">
-          <input type="radio" id="winter" name="season" value="winter" checked>
+          <!-- <input type="radio" id="winter" name="season" value="winter" checked> -->
+          <div class="favorites-input-wrapper">
+            <input type="radio" id="winter" name="season" value="winter" checked>
+          </div>
           <span>Winter</span>
         </label>
         <label class="favorites-label" for="spring">
-          <input type="radio" id="spring" name="season" value="spring">
+          <div class="favorites-input-wrapper">
+            <input type="radio" id="spring" name="season" value="spring">
+          </div>
+          <!-- <input type="radio" id="spring" name="season" value="spring"> -->
           <span>Spring</span>
         </label>
         <label class="favorites-label" for="summer">
@@ -94,7 +101,7 @@
       <div id="winter-id" class="favorites-box winter">
         <div class="favorites-box-item">
           <h3 class="h3-favorites-box">Staff Picks</h3>
-          <h4 class="h4-favorites-box-title">THE BOOK EATER</h4>
+          <h4 class="h4-favorites-box-title">THE BOOK EATERS</h4>
           <h4 class="h4-favorites-box-author">By Sunyi Dean</h4>
           <p class="favorites-box-text">An unusual sci-fi story about a book eater woman who tries desperately to save
             her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values,
@@ -241,9 +248,8 @@
 
     <section id="coffee-shop" class="coffee-shop">
       <h2 class="h2-coffee-shop">Coffee Shop</h2>
-      <p class="p-coffee-shop">In our library, we have of cozy coffee shop, welcoming in customers with frothy
-        cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook
-        you best coffee, and also you can try desserts from bakery.</p>
+      <p class="p-coffee-shop">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
+        you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
       <div class="coffee-shop-box">
         <div class="coffee-shop-box-left-column">
           <h2 class="h2-coffee-shop-box">Coffee & Tea</h2>
@@ -417,23 +423,10 @@
     </div>
   </div>
 </footer>
-<!-- <script>
-  function showSeason() {
-  if (document.getElementById('winter').checked) {
-    // document.getElementById("winter-id").style.visibility="visible";
-    document.getElementById("winter-id").style.display = 'flex';
-  } else if (document.getElementById("spring").checked) {
-    document.getElementById("spring-id").style.display = 'flex';
-  }
-}
 
-const radioButtons = document.querySelectorAll('input[name="season"]');
-radioButtons.forEach(radio => {
-  radio.addEventListener('click', handleRadioClick);
-});
-</script> -->
+<script src="./js/slider.js"></script>
 <script src="./js/seasons.js"></script>
-<!-- <script src="./js/index.js"></script> -->
+<script src="./js/index.js"></script>
 </body>
 
 </html>

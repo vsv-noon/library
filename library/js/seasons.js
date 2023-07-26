@@ -9,29 +9,29 @@ const autumnBooks = document.getElementById("autumn-id");
 
 function showSeason() {
   if (winter.checked) {
-    winterBooks.style.transition = "5s ease-in-out";
+    // winterBooks.classList.add("season-animation")
     winterBooks.style.display = 'flex';
     springBooks.style.display = 'none';
     summerBooks.style.display = 'none';
     autumnBooks.style.display = 'none';
   }
   if (spring.checked) {
+    // springBooks.classList.add("season-animation")
     winterBooks.style.display = 'none';
-    winterBooks.style.transition = "5s ease-in-out";
     springBooks.style.display = 'flex';
     summerBooks.style.display = 'none';
     autumnBooks.style.display = 'none';
   }
   if (summer.checked) {
+    // summerBooks.classList.add("season-animation")
     winterBooks.style.display = 'none';
-    winterBooks.style.transition = "5s ease-in-out";
     springBooks.style.display = 'none';
     summerBooks.style.display = 'flex';
     autumnBooks.style.display = 'none';
   }
   if (autumn.checked) {
+    // autumnBooks.classList.add("season-animation")
     winterBooks.style.display = 'none';
-    winterBooks.style.transition = "5s ease-in-out";
     springBooks.style.display = 'none';
     summerBooks.style.display = 'none';
     autumnBooks.style.display = 'flex';
