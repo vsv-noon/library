@@ -82,6 +82,15 @@ a:hover {
   text-decoration: none;
 }
 
+/* .profie-ico svg {
+  fill: white;
+} */
+
+svg:hover path {
+  fill: grey;
+  transition: 0.3s ease-in-out;
+}
+
 .welcome {
   width: 100%;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
@@ -155,7 +164,7 @@ a:hover {
   width: 50px;
   position: absolute;
   bottom: 39px;
-  left: 675px;
+  left: 48%;
 }
 
 .p-about {
@@ -223,7 +232,8 @@ a:hover {
 .form-favorites-season {
   display: flex;
   justify-content: space-between;
-  width: 704px;
+  flex-wrap: wrap;
+  max-width: 704px;
   margin-bottom: 35px;
 }
 
@@ -576,11 +586,6 @@ a:hover {
   text-align: center;
 }
 
-.library-card-box-right-column {
-  width: 33%;
-  text-align: right;
-}
-
 .h3-library-card-left-column {
   color: #000;
   font-family: Inter;
@@ -677,6 +682,13 @@ a:hover {
   transition: 0.3s ease-in-out;
 }
 
+.library-card-box-right-column {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  text-align: right;
+}
+
 .h3-library-card-right-column {
   color: #000;
   font-family: Forum;
@@ -701,18 +713,16 @@ a:hover {
 }
 
 .btn-log-in {
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .btn-sign-up,
 .btn-log-in {
   width: 75px;
   height: 30px;
-  width: 75px;
-  height: 30px;
-  padding: 10px 0px;
-  justify-content: center;
-  align-items: center;
+  /* padding: 10px 0px; */
+  /* justify-content: center; */
+  /* align-items: center; */
   flex-shrink: 0;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
