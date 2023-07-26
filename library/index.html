@@ -74,7 +74,7 @@
       <h2 class="h2-favorites">Favorites</h2>
       <h3 class="h3-favorites">Pick favorites of season</h3>
       <form class="form-favorites-season" action="#">
-        <label class="favorites-label" for="winter">
+        <label id="winter-label" class="favorites-label" for="winter">
           <input type="radio" id="winter" name="season" value="winter" checked>
           <span>Winter</span>
         </label>
@@ -91,7 +91,7 @@
           <span>Autumn</span>
         </label>
       </form>
-      <div class="favorites-box winter">
+      <div id="winter-id" class="favorites-box winter">
         <div class="favorites-box-item">
           <h3 class="h3-favorites-box">Staff Picks</h3>
           <h4 class="h4-favorites-box-title">THE BOOK EATER</h4>
@@ -133,7 +133,7 @@
         </div>
       </div>
 
-      <div class="favorites-box spring">
+      <div id="spring-id" class="favorites-box spring">
         <div class="favorites-box-item">
           <h3 class="h3-favorites-box">Staff Picks</h3>
           <h4 class="h4-favorites-box-title">THE BODY</h4>
@@ -168,7 +168,7 @@
         </div>
       </div>
 
-      <div class="favorites-box summer">
+      <div id="summer-id" class="favorites-box summer">
         <div class="favorites-box-item">
           <h3 class="h3-favorites-box">Staff Picks</h3>
           <h4 class="h4-favorites-box-title">Crude: A Memoir</h4>
@@ -203,7 +203,7 @@
         </div>
       </div>
 
-      <div class="favorites-box autumn">
+      <div id="autumn-id" class="favorites-box autumn">
         <div class="favorites-box-item">
           <h3 class="h3-favorites-box">Staff Picks</h3>
           <h4 class="h4-favorites-box-title">Casual Conversation</h4>
@@ -417,7 +417,23 @@
     </div>
   </div>
 </footer>
-<script src="./js/index.js"></script>
+<!-- <script>
+  function showSeason() {
+  if (document.getElementById('winter').checked) {
+    // document.getElementById("winter-id").style.visibility="visible";
+    document.getElementById("winter-id").style.display = 'flex';
+  } else if (document.getElementById("spring").checked) {
+    document.getElementById("spring-id").style.display = 'flex';
+  }
+}
+
+const radioButtons = document.querySelectorAll('input[name="season"]');
+radioButtons.forEach(radio => {
+  radio.addEventListener('click', handleRadioClick);
+});
+</script> -->
+<script src="./js/seasons.js"></script>
+<!-- <script src="./js/index.js"></script> -->
 </body>
 
 </html>

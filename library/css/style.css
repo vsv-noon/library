@@ -76,6 +76,11 @@ a:hover {
   transition: 0.3s ease-in-out;
 }
 
+a span:hover {
+  color: grey;
+  transition: 0.3s ease-in-out;
+}
+
 .navigation {
   display: flex;
   gap: 30px;
@@ -229,19 +234,19 @@ svg:hover path {
   margin-bottom: 35px;
 }
 
-.favorites-box.winter {
+#winter-id {
   /* display: none; */
 }
 
-.favorites-box.spring {
+#spring-id {
   display: none;
 }
 
-.favorites-box.summer {
+#summer-id {
   display: none;
 }
 
-.favorites-box.autumn {
+#autumn-id {
   display: none;
 }
 
