@@ -74,12 +74,12 @@ a {
 
 a:hover {
   cursor: pointer;
-  color: grey;
+  color: gray;
   transition: 0.3s ease-in-out;
 }
 
 a span:hover {
-  color: grey;
+  color: gray;
   transition: 0.3s ease-in-out;
 }
 
@@ -90,7 +90,7 @@ a span:hover {
 }
 
 svg:hover path {
-  fill: grey;
+  fill: gray;
   transition: 0.3s ease-in-out;
 }
 
@@ -293,7 +293,7 @@ svg:hover path {
 }
 
 .favorites-label {
-  /* position: relative; */
+  position: relative;
   display: flex;
   align-items: center;
   width: 125px;
@@ -308,15 +308,14 @@ svg:hover path {
   cursor: pointer;
 }
 
-/* .favorites-input-wrapper {
-  z-index: 20;
-  display: flex;
-  text-align: center;
-  width: 18px;
-  height: 18px;
-  border: 2px solid black;
+.favorites-label input::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
   border-radius: 50%;
-} */
+}
 
 .favorites-label:first-child {
   padding: 5px 0 5px 0;
@@ -826,6 +825,11 @@ svg:hover path {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+.p-footer-left-column:hover {
+  color: gray;
+  transition: 0.3s ease-in-out;
 }
 
 .p-footer-right-column {
