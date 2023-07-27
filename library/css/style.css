@@ -24,7 +24,9 @@ body {
 }
 
 header {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 1440px;
+  margin: 0 auto;
   background: #0C0C0E;
 }
 
@@ -93,7 +95,9 @@ svg:hover path {
 }
 
 .welcome {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 1440px;
+  margin: 0 auto;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
   background-size: cover;
   /* background-repeat: no-repeat;
@@ -803,6 +807,8 @@ svg:hover path {
 }
 
 .footer {
+  max-width: 1440px;
+  margin: 0 auto;
   background: #0C0C0E;
 }
 
