@@ -67,18 +67,28 @@ h1 {
   line-height: 50px;
 }
 
-a {
-  color: #000;
-  cursor: pointer;
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: gray;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  left: 0;
+  right: 0;
 }
 
 a:hover {
   cursor: pointer;
-  color: gray;
-  transition: 0.3s ease-in-out;
-}
-
-a span:hover {
   color: gray;
   transition: 0.3s ease-in-out;
 }
@@ -169,7 +179,8 @@ svg:hover path {
   width: 50px;
   position: absolute;
   bottom: 39px;
-  left: 48%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .p-about {
@@ -639,6 +650,16 @@ svg:hover path {
   text-transform: capitalize;
 }
 
+.contacts-link {
+  color: #000;
+  cursor: pointer;
+}
+
+.contacts-link span:hover {
+  color: gray;
+  transition: 0.3s ease-in-out;
+}
+
 .library-card-box {
   display: flex;
   justify-content: space-between;
@@ -882,5 +903,5 @@ svg:hover path {
 }
 
 .p-footer-bottom-row-left {
-  margin-right: 165px;
+  margin-right: 66px;
 }
