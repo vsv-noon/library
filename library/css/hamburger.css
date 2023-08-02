@@ -1,0 +1,154 @@
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .header-right-column :first-child {
+    order: 2;
+  }
+
+  .header-block {
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+
+  .header :nth-child(2) {
+    order: 3;
+  }
+
+  .menu-toggle {
+    position: relative;
+  }
+
+  .menu-btn .menu-toggle::after:hover {
+    background: #BB945F;
+  }
+
+  .header-navigation {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 0;
+    height: 10px;
+    /* margin-right: 20px; */
+    background: #0C0C0E;
+    ;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+    overflow: hidden;
+  }
+
+  .header-navigation.active {
+    width: 332px;
+    height: 570px;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+  }
+
+  /* Hamburger toggle menu */
+
+  .menu-btn .menu-toggle {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    /* background: #000; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-btn .menu-toggle::before {
+    content: '';
+    /* position: absolute; */
+    width: 45px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #fff;
+    transition: 0.5s;
+  }
+
+  .menu-btn .menu-toggle::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(10px);
+    transition: 0.5s;
+  }
+
+  .menu-btn.active .menu-toggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+  }
+
+  .menu-btn.active .menu-toggle::after {
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  .menu-btn .menu-toggle:hover::before {
+    background: #BB945F;
+    box-shadow: 0 10px #BB945F;
+  }
+
+  .menu-btn .menu-toggle:hover::after {
+    background: #BB945F;
+  }
+
+  .menu-btn.active .menu-toggle:hover::before {
+    box-shadow: 0 0 #555;
+  }
+
+  .menu {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    /* gap: 30px; */
+    width: 100%;
+    /* height: calc(100% - 60px); */
+    /* padding: 20px; */
+    /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+  }
+
+  .menu :nth-child(2) {
+    /* order: 2; */
+  }
+
+  .menu li {
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+  }
+
+  .menu li a {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    /* margin: 10px 0; */
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+
+  }
+
+  .menu li a:hover {
+    color: #BB945F;
+  }
+
+}

@@ -58,7 +58,7 @@ h1 {
   padding: 20px;
 }
 
-.navigation a {
+.menu a {
   color: #FFF;
   font-family: Inter;
   font-size: 20px;
@@ -93,7 +93,7 @@ a:hover {
   transition: 0.3s ease-in-out;
 }
 
-.navigation {
+.menu {
   display: flex;
   gap: 30px;
   text-decoration: none;
