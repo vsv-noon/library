@@ -3,6 +3,9 @@
 }
 
 @media (max-width: 768px) {
+  .welcome {
+    background: url(../img/tablet-welcome.jpg), lightgray 50% / cover no-repeat;;
+  }
   .menu-btn {
     display: flex;
   }
@@ -48,8 +51,8 @@
   .header-navigation.active {
     width: 332px;
     height: 570px;
-    transition: width 0.5s, height 0.5s;
-    transition-delay: 0s, 0.75s;
+    transition: width 0.75s, height 0s;
+    transition-delay: 0s, 0.1s;
   }
 
   /* Hamburger toggle menu */
