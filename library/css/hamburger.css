@@ -2,14 +2,26 @@
   display: none;
 }
 
+@media (max-width: 1250px) {
+  .favorites-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media (max-width: 1024px) {
 
   .menu-btn {
-    display: flex;
+    display: block;
   }
 
-  .header-right-column :first-child {
+  #menu-btn-id {
     order: 2;
+  }
+
+  #profile-link-id {
+    order: 1;
   }
 
   .header-block {
@@ -18,7 +30,7 @@
   }
 
   .header :nth-child(2) {
-    order: 3;
+    /* order: 3; */
   }
 
   .menu-toggle {
@@ -37,9 +49,8 @@
     height: 10px;
     /* margin-right: 20px; */
     background: #0C0C0E;
-    ;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: block;
     justify-content: space-between;
     transition: height 0.5s, width 0.5s;
     transition-delay: 0s, 0.75s;
@@ -48,7 +59,7 @@
 
   .header-navigation.active {
     width: 332px;
-    height: 570px;
+    height: 470px;
     transition: width 0.75s, height 0s;
     transition-delay: 0s, 0.1s;
   }
@@ -59,7 +70,6 @@
     position: relative;
     width: 45px;
     height: 45px;
-    /* background: #000; */
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -68,7 +78,6 @@
 
   .menu-btn .menu-toggle::before {
     content: '';
-    /* position: absolute; */
     width: 45px;
     height: 2px;
     background: #fff;
@@ -110,32 +119,17 @@
   }
 
   .menu {
-    position: absolute;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
-    /* gap: 30px; */
-    width: 100%;
-    /* height: calc(100% - 60px); */
-    /* padding: 20px; */
-    /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
-  }
-
-  .menu :nth-child(2) {
-    /* order: 2; */
   }
 
   .menu li {
     margin: 0 auto;
-    list-style: none;
-    text-align: center;
   }
 
   .menu li a {
     display: flex;
     align-items: center;
-    /* gap: 10px; */
-    /* margin: 10px 0; */
     font-size: 1em;
     text-decoration: none;
     color: #fff;
@@ -202,6 +196,7 @@
   .library-card {
     padding-bottom: 40px;
   }
+
   .library-card-box-right-column {
     width: 80%;
     align-items: center;

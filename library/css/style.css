@@ -109,6 +109,7 @@ svg:hover path {
   max-width: 1440px;
   margin: 0 auto;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -370,8 +371,12 @@ svg:hover path {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   box-sizing: border-box;
+}
+
+.favorites-box-card {
+  width: 590px;
 }
 
 .favorites-box-item {
@@ -583,7 +588,7 @@ svg:hover path {
 }
 
 .contacts {
-  margin-bottom: 56px;
+  margin-bottom: 58px;
 }
 
 .contacts-box {
@@ -613,8 +618,16 @@ svg:hover path {
   text-align-last: left;
 }
 
-.contacts-box-right-column img {
+.contacts-box-right-column {
+  /* width: 50%; */
+  /* height: 100%; */
+}
+.contacts-map {
   padding-left: 4px;
+  width: 100%;
+  height: auto;
+  max-width: 696px;
+   /* max-height: 414px; */
 }
 
 .h3-contacts {
