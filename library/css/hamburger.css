@@ -2,10 +2,8 @@
   display: none;
 }
 
-@media (max-width: 768px) {
-  .welcome {
-    background: url(../img/tablet-welcome.jpg), lightgray 50% / cover no-repeat;;
-  }
+@media (max-width: 1024px) {
+
   .menu-btn {
     display: flex;
   }
@@ -154,4 +152,72 @@
     color: #BB945F;
   }
 
+  .about,
+  .favorites-box,
+  .contacts,
+  .library-card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #slide2 {
+    display: none;
+  }
+
+  #slide3 {
+    display: none;
+  }
+
+  .slider {
+    margin-bottom: 20px;
+  }
+
+  .slider-pagination {
+    margin-bottom: 35px;
+  }
+
+  .p-coffee-shop {
+    margin: 0 -2px 40px -2px;
+
+  }
+
+  .coffee-shop-box {
+    position: relative;
+    justify-content: space-between;
+    /* flex-direction: column; */
+  }
+
+  .coffee-shop-box-right-column {
+    width: 100%;
+    margin-left: 32%;
+
+  }
+
+  .contacts-box-left-column {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .library-card {
+    padding-bottom: 40px;
+  }
+  .library-card-box-right-column {
+    width: 80%;
+    align-items: center;
+  }
+
+
+  .p-library-card-box-right-column {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .check-the-card-form {
+    margin-bottom: 23px;
+  }
+
+  .p-footer-bottom-row-left {
+    margin-right: 10px;
+  }
 }

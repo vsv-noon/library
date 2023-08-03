@@ -110,8 +110,7 @@ svg:hover path {
   margin: 0 auto;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../img/welcome-without-overlay.jpg);
   background-size: cover;
-  /* background-repeat: no-repeat;
-  background-position: center; */
+  background-repeat: no-repeat;
 }
 
 .welcome-block {
@@ -922,4 +921,12 @@ svg:hover path {
 
 .p-footer-bottom-row-left {
   margin-right: 66px;
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    background: url(../img/tablet-welcome.jpg), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
