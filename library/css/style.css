@@ -208,7 +208,8 @@ svg:hover path {
 .slider {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 25px;
+  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 35px;
 }
@@ -225,6 +226,14 @@ svg:hover path {
   display: flex;
   justify-content: center;
   margin: 0 auto 55px auto;
+}
+
+#label-slider-radio4 {
+  display: none;
+}
+
+#label-slider-radio5 {
+  display: none;
 }
 
 .slider-manual-btn input {
