@@ -214,6 +214,11 @@ svg:hover path {
   margin-bottom: 35px;
 }
 
+.slider-arrow-left,
+.slider-arrow-right {
+  display: none;
+}
+
 #slide4 {
   display: none;
 }
