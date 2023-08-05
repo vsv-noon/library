@@ -29,6 +29,7 @@
 
   .menu-btn {
     display: block;
+    padding-bottom: 2px;
   }
 
   #label-slider-radio5 {
@@ -45,7 +46,6 @@
 
   .header-block {
     justify-content: space-between;
-    margin-right: 20px;
   }
 
   .header :nth-child(2) {
@@ -66,7 +66,6 @@
     right: 0px;
     width: 0;
     height: 10px;
-    /* margin-right: 20px; */
     background: #0C0C0E;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
     display: block;
@@ -190,23 +189,16 @@
   cursor: pointer;
   border: none;
   background: none;
-  /* border-radius: 50%; */
 }
 
 .slider-arrow-left {
   padding-top: 40px;
-  padding-right: 30px;
-  /* position: absolute; */
-  /* top: 0; */
-  left: 0;
+  margin-right: 30px;
 }
 
 .slider-arrow-right {
   padding-top: 40px;
-  padding-left: 30px;
-  /* position: absolute; */
-  /* top: 0; */
-  left: 0;
+  margin-left: 30px;
 }
 
   .slider-pagination {
@@ -222,12 +214,10 @@
   .coffee-shop-box {
     position: relative;
     justify-content: space-between;
-    /* flex-direction: column; */
   }
 
   .coffee-shop-box-right-column {
-    width: 100%;
-    margin-left: 32%;
+    margin-left: auto;
 
   }
 
@@ -257,5 +247,16 @@
 
   .p-footer-bottom-row-left {
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  .slider-arrow-left {
+    margin-right: 0px;
+
+  }
+
+  .slider-arrow-right {
+    margin-left: 0px;
   }
 }
