@@ -28,6 +28,7 @@ header {
   max-width: 1440px;
   margin: 0 auto;
   background: #0C0C0E;
+  z-index: 5;
 }
 
 .header-block {
