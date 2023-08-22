@@ -204,36 +204,23 @@ svg:hover path {
   margin-bottom: 20px;
 }
 
-.slider-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about-slider-wrapper {
+  overflow: hidden;
+  margin-bottom: 31px;
 }
 
-.slide {
-  width: 450px;
-  height: 560px;
-}
-
-.slider {
+.about-slider-inner {
   display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  left: 0;
   gap: 25px;
-  /* justify-content: space-between; */
+  transition: 0.5s linear;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 35px;
 }
 
-.slider-arrow-left,
-.slider-arrow-right {
-  display: none;
-}
-
-#slide4 {
-  display: none;
-}
-
-#slide5 {
+.about-slider-arrow-left,
+.about-slider-arrow-right {
   display: none;
 }
 
@@ -243,15 +230,11 @@ svg:hover path {
   margin: 0 auto 55px auto;
 }
 
-#label-slider-radio4 {
+#slider-manual-btn-4 {
   display: none;
 }
 
-#label-slider-radio5 {
-  display: none;
-}
-
-.slider-manual-btn input {
+#slider-manual-btn-5 {
   display: none;
 }
 
@@ -265,7 +248,11 @@ svg:hover path {
   border-radius: 50%;
 }
 
-.slider-manual-btn span {
+.slider-manual-btn-active {
+  cursor: default;
+}
+
+.slider-manual-btn-span {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -273,9 +260,23 @@ svg:hover path {
   transition: 0.3s ease-in-out;
 }
 
-.slider-manual-btn input:checked~span {
+.slider-manual-btn-span-active {
   background-color: #BB945F;
   transition: 0.3s ease-in-out;
+  /* cursor: default; */
+}
+
+.slider-manual-btn-inactive {
+  cursor: default;
+}
+
+.about-slider-inner {
+  display: flex;
+  position: relative;
+  gap: 25px;
+  transition: 0.5s linear;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .h3-favorites {
@@ -292,12 +293,12 @@ svg:hover path {
 .favorites-box.hidden {
   /* visibility: hidden; */
   position: absolute;
-  top: -100%;
+  /* top: -100%; */
   opacity: 0;
 }
 
 .favorites-box {
-  transition: all 1s;
+  /* transition: all 1s; */
 }
 
 #winter-id {
@@ -505,7 +506,7 @@ svg:hover path {
 }
 
 .favorites-box-text {
-  width: 359px;
+  width: 358px;
   margin-left: 20px;
   margin-bottom: 15px;
   color: #000;

@@ -117,41 +117,43 @@
       <h2 class="h2-about">About</h2>
       <p class="p-about">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
       </p>
-      <div class="slider">
-        <button class="slider-arrow-left">
+      <div class="about-slider">
+        <button class="about-slider-arrow-left about-slider-arrow-inactive">
           <img src="./img/slider/arrow-left.svg" alt="arrow-left">
         </button>
-        <div id="slide1" class="slide first"><img src="./img/slider/image-1.jpg" alt="image-1" class="img"></div>
-        <div id="slide2" class="slide second"><img src="./img/slider/image-2.jpg" alt="image-2" class="img"></div>
-        <div id="slide3" class="slide third"><img src="./img/slider/image-3.jpg" alt="image-3" class="img"></div>
-        <div id="slide4" class="slide fourth"><img src="./img/slider/image-4.jpg" alt="image-3" class="img"></div>
-        <div id="slide5" class="slide fifth"><img src="./img/slider/image-5.jpg" alt="image-3" class="img"></div>
-        <button class="slider-arrow-right">
-          <img src="./img/slider/arrow-right.svg" alt="arrow-left">
+        <div class="about-slider-wrapper">
+          <div class="about-slider-inner">
+            <div id="slide1" class="about-slide"><img src="./img/slider/image-1.jpg" alt="image-1" loading="lazy"></div>
+            <div id="slide2" class="about-slide"><img src="./img/slider/image-2.jpg" alt="image-2" loading="lazy"></div>
+            <div id="slide3" class="about-slide"><img src="./img/slider/image-3.jpg" alt="image-3" loading="lazy"></div>
+            <div id="slide4" class="about-slide"><img src="./img/slider/image-4.jpg" alt="image-3" loading="lazy"></div>
+            <div id="slide5" class="about-slide"><img src="./img/slider/image-5.jpg" alt="image-3" loading="lazy"></div>
+          </div>
+        </div>
+
+        <button class="about-slider-arrow-right">
+          <img src="./img/slider/arrow-right.svg" alt="arrow-right">
         </button>
       </div>
+
       <div class="slider-pagination">
-        <label for="slider-radio1" id="label-slider-radio1" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="slider-radio1" checked>
-          <span></span>
-        </label>
-        <label id="label-slider-radio" for="slider-radio2" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="slider-radio2">
-          <span></span>
-        </label>
-        <label for="slider-radio3" id="label-slider-radio3" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="slider-radio3">
-          <span></span>
-        </label>
-        <label for="slider-radio4" id="label-slider-radio4" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="slider-radio4">
-          <span></span>
-        </label>
-        <label for="slider-radio5" id="label-slider-radio5" class="slider-manual-btn">
-          <input type="radio" name="slider-btn" id="slider-radio5">
-          <span></span>
-        </label>
+        <div id="slider-manual-btn-1" class="slider-manual-btn slider-manual-btn-active">
+          <span class="slider-manual-btn-span slider-manual-btn-span-active"></span>
+        </div>
+        <div id="slider-manual-btn-2" class="slider-manual-btn">
+          <span class="slider-manual-btn-span"></span>
+        </div>
+        <div id="slider-manual-btn-3" class="slider-manual-btn">
+          <span class="slider-manual-btn-span"></span>
+        </div>
+        <div id="slider-manual-btn-4" class="slider-manual-btn">
+          <span class="slider-manual-btn-span"></span>
+        </div>
+        <div id="slider-manual-btn-5" class="slider-manual-btn">
+          <span class="slider-manual-btn-span"></span>
+        </div>
       </div>
+
     </section>
     <section id="favorites" class="favorites">
       <h2 class="h2-favorites">Favorites</h2>
@@ -576,7 +578,7 @@
   </div>
 </footer>
 
-<!-- <script src="./js/slider.js"></script> -->
+<script src="./js/slider.js"></script>
 <script src="./js/modals.js"></script>
 <script src="./js/seasons.js"></script>
 <script src="./js/hamburger.js"></script>
