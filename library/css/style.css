@@ -50,13 +50,6 @@ header {
   padding-right: 20px;
 }
 
-.profile-btn {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding-left: 40px;
-}
-
 h1 {
   color: #FFF;
   font-family: Forum;
@@ -109,8 +102,16 @@ a:hover {
   text-decoration: none;
 }
 
+.profile-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-left: 40px;
+}
+
 svg:hover path {
   fill: #BB945F;
+  stroke: #BB945F;
   transition: 0.3s ease-in-out;
 }
 
@@ -321,7 +322,7 @@ svg:hover path {
 
 .season-animation {
   /* display: flex; */
-  transition-delay: 5s;
+  /* transition-delay: 5s; */
   /* visibility: visible; */
   /* height: 555px; */
   /* animation-delay: 5s; */
@@ -447,7 +448,7 @@ svg:hover path {
   margin-bottom: 40px;
   position: relative;
   text-align: left;
-  transition: opacity 3s;
+  /* transition: all 3s linear; */
 }
 
 .favorites-box-item-img {
@@ -1049,8 +1050,14 @@ svg:hover path {
   /* align-items: center; */
   /* justify-content: center; */
   display: none;
-  transition: all 1s ease;
+  /* transition: all 1s ease; */
     overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    right: 105px;
+  }
 }
 
 .modal-overlay--visible {
@@ -1114,6 +1121,19 @@ svg:hover path {
   font-weight: 400;
   line-height: 20px;
   /* 133.333% */
+}
+
+.modal-profile-btn:hover {
+  cursor: pointer;
+  color: #BB945F;
+  transition: 0.3s ease-in-out;
+}
+
+.register-form-btn:hover,
+.login-form-btn:hover {
+  cursor: pointer;
+  background: #BB945F;
+  transition: 0.3s ease-in-out;
 }
 
 .login-card {
