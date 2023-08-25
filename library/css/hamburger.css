@@ -240,7 +240,8 @@ body._lock {
   }
 
   .about-slider-arrow-inactive {
-    cursor: default;
+    /* cursor: default; */
+    pointer-events: none;
     opacity: 0.5;
   }
 

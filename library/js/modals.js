@@ -48,11 +48,10 @@ btns.forEach((el) => {
       el.classList.remove('modal--visible');
     });
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
     modalOverlay.classList.add('modal-overlay--visible');
-
   });
 });
 
