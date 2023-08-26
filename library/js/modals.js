@@ -28,6 +28,7 @@
 const btns = document.querySelectorAll('.modal-btn');
 const modalOverlay = document.querySelector('.modal-overlay ');
 const modals = document.querySelectorAll('.modal');
+const hamburger = document.querySelector('.menu-toggle');
 
 const closeBtn = document.querySelectorAll('.close-btn');
 
@@ -58,7 +59,7 @@ btns.forEach((el) => {
 modalOverlay.addEventListener('click', (e) => {
   console.log(e.target);
 
-  if (e.target == modalOverlay) {
+  if (e.target == modalOverlay || e.target == hamburger) {
     modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
