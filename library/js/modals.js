@@ -84,6 +84,8 @@ registerNewUser.addEventListener('click', () => {
   localStorage.setItem('registered', true);
   localStorage.setItem('active', true);
   localStorage.setItem('visits', 1);
+  localStorage.setItem('abonement', false);
+  localStorage.setItem('booksCount', 0);
   modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
@@ -110,6 +112,7 @@ const myProfileUserName = document.querySelector('.my-profile-user-name');
 const myProfileInitials = document.querySelector('.my-profile-initials');
 const visitsCount = document.querySelector('.my-profile-list-visits-count');
 const cardNumberField = document.querySelector('.span-my-pofile-card-number');
+const booksCount = document.querySelector('.my-profile-list-books-count');
 
 
   if (localStorage.getItem('active') == 'true') {
@@ -118,10 +121,18 @@ const cardNumberField = document.querySelector('.span-my-pofile-card-number');
     document.querySelector('.initials').textContent = localStorage.getItem('userName').slice(0, 1).toUpperCase() + localStorage.getItem('userSurname').slice(0, 1).toLocaleUpperCase();
     document.querySelector('.initials').title = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
     document.querySelector('.h4-modal--2').textContent = localStorage.getItem('cardNumber');
+    document.querySelectorAll('.btn-buy').forEach((el) => {
+      if (localStorage.getItem('subscription') == 'false') {
+        el.setAttribute('data-path', 'buy-subscription');
+      } else {
+        el.setAttribute('data-path', 'buy-book');
+      }
+    });
 
     myProfileUserName.textContent = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
     myProfileInitials.textContent = localStorage.getItem('userName').slice(0, 1).toUpperCase() + localStorage.getItem('userSurname').slice(0, 1).toLocaleUpperCase();
     visitsCount.textContent = localStorage.getItem('visits');
+    booksCount.textContent = localStorage.getItem('booksCount');
     cardNumberField.textContent = localStorage.getItem('cardNumber');
   }
 
@@ -161,4 +172,34 @@ const copy = document.querySelector('.my-profile-card-number-copy');
 
 copy.addEventListener('click', () => {
   navigator.clipboard.writeText(cardNumberField.textContent);
-})
+});
+
+// Купить книгу
+if (localStorage.getItem('active') == 'false' || localStorage.getItem('subscription') == 'false') {
+  document.querySelectorAll('.btn-buy').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      let path = e.currentTarget.getAttribute('data-path');
+
+      modals.forEach((el) => {
+        el.classList.remove('modal--visible');
+      });
+
+      // window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+      modalOverlay.classList.add('modal-overlay--visible');
+    });
+  });
+} else {
+  document.querySelectorAll('.btn-buy').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // el.classList.add('btn-buy-hidden');
+      el.innerHTML = 'Own';
+      el.setAttribute = 'disabled';
+      el.classList.add('btn-own');
+      el.classList.remove('btn-buy');
+    });
+  });
+}
+

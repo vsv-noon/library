@@ -347,6 +347,7 @@ svg:hover path {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
+  padding-left: 5px;
 }
 
 .login-form-btn,
@@ -578,6 +579,49 @@ svg:hover path {
 
 .my-profile-card-number-copy {
   cursor: pointer;
+}
+
+.buy-subscription {
+  width: 640px;
+  height: 540px;
+  background: #fff;
+}
+
+.h3-buy-subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: #FFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: #0C0C0E;
+}
+
+.buy-subscription-table {
+  display: flex;
+}
+
+.p-buy-subscription-left-column {
+  width: 300px;
+}
+
+.p-buy-subscription-right-column {
+  width: 330px;
+  color: #8E8E8E;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 133.333% */
+  letter-spacing: 2px;
 }
 
 /* Welcome */
@@ -1008,6 +1052,14 @@ svg:hover path {
   transition: 0.3s ease-in-out;
 }
 
+.btn-buy-hidden {
+  display: none;
+}
+
+.btn-buy-hidden[data-target="buy-book"] {
+  /* display: block; */
+}
+
 .btn-own {
   width: 75px;
   height: 30px;
@@ -1019,6 +1071,7 @@ svg:hover path {
   border: 1px solid #BB945F;
   color: #BB945F;
   background: #fff;
+  pointer-events: none;
 }
 
 .h2-coffee-shop {
