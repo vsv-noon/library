@@ -83,6 +83,7 @@ registerNewUser.addEventListener('click', () => {
   localStorage.setItem('userPassword', registerPassword.value);
   localStorage.setItem('registered', true);
   localStorage.setItem('active', true);
+  localStorage.setItem('visits', 1);
   modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
@@ -105,6 +106,9 @@ const activeStatus = localStorage.getItem('active');
 const userEmail = localStorage.getItem('userEmail');
 const userPassword = localStorage.getItem('userPassword');
 
+const myProfileUserName = document.querySelector('.my-profile-user-name');
+const myProfileInitials = document.querySelector('.my-profile-initials');
+const visitsCount = document.querySelector('.my-profile-list-visits-count');
 const cardNumberField = document.querySelector('.span-my-pofile-card-number');
 
 
@@ -115,6 +119,9 @@ const cardNumberField = document.querySelector('.span-my-pofile-card-number');
     document.querySelector('.initials').title = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
     document.querySelector('.h4-modal--2').textContent = localStorage.getItem('cardNumber');
 
+    myProfileUserName.textContent = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
+    myProfileInitials.textContent = localStorage.getItem('userName').slice(0, 1).toUpperCase() + localStorage.getItem('userSurname').slice(0, 1).toLocaleUpperCase();
+    visitsCount.textContent = localStorage.getItem('visits');
     cardNumberField.textContent = localStorage.getItem('cardNumber');
   }
 
@@ -126,6 +133,7 @@ const cardNumberField = document.querySelector('.span-my-pofile-card-number');
  loginUser.addEventListener('click', () => {
   if (loginEmail.value == userEmail && loginPassword.value == userPassword) {
     localStorage.setItem('active', true);
+    localStorage.setItem('visits', +localStorage.getItem('visits') + 1);
     modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');

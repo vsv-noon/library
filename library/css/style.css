@@ -525,13 +525,37 @@ svg:hover path {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 100% */
+
   letter-spacing: 2px;
   text-transform: capitalize;
 }
 
 .my-profile-list-books {
-  margin-bottom: 40px;
+  height: 90px;
+  width: 98%;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+  overflow: hidden;
+}
+
+.my-profile-list-books::-webkit-scrollbar {
+  width: 5px;
+}
+
+.my-profile-list-books:hover {
+  transition: all 5s ease;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.my-profile-list-books::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.my-profile-list-books::-webkit-scrollbar-thumb {
+  background: #BB945F;
+  border-radius: 10px;
+  /* border: transparent; */
 }
 
 .my-profile-card-number {
@@ -545,7 +569,7 @@ svg:hover path {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 100% */
+
 }
 
 .span-my-pofile-card-number {
