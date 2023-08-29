@@ -101,9 +101,11 @@ function getRandomNumber() {
  }
 
  // Страница после успешного входа в аккаунт
-let activeStatus = localStorage.getItem('active');
-let userEmail = localStorage.getItem('userEmail');
-let userPassword = localStorage.getItem('userPassword');
+const activeStatus = localStorage.getItem('active');
+const userEmail = localStorage.getItem('userEmail');
+const userPassword = localStorage.getItem('userPassword');
+
+const cardNumberField = document.querySelector('.span-my-pofile-card-number');
 
 
   if (localStorage.getItem('active') == 'true') {
@@ -112,6 +114,8 @@ let userPassword = localStorage.getItem('userPassword');
     document.querySelector('.initials').textContent = localStorage.getItem('userName').slice(0, 1).toUpperCase() + localStorage.getItem('userSurname').slice(0, 1).toLocaleUpperCase();
     document.querySelector('.initials').title = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
     document.querySelector('.h4-modal--2').textContent = localStorage.getItem('cardNumber');
+
+    cardNumberField.textContent = localStorage.getItem('cardNumber');
   }
 
  // Вход в учетную запись
@@ -139,4 +143,14 @@ const logOut = document.querySelector('.log-out-btn');
 logOut.addEventListener('click', () => {
   localStorage.setItem('active', false);
   location.reload();
+})
+
+// Карточка My Profile
+
+// Скопировать Card Number
+const copy = document.querySelector('.my-profile-card-number-copy');
+// const cardNumberField = document.querySelector('.span-my-pofile-card-number');
+
+copy.addEventListener('click', () => {
+  navigator.clipboard.writeText(cardNumberField.textContent);
 })

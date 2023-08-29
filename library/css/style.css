@@ -189,6 +189,7 @@ svg:hover path {
 }
 
 @media (max-width: 1024px) {
+
   .modal--1,
   .modal--2 {
     right: 105px;
@@ -386,6 +387,173 @@ svg:hover path {
   text-decoration-line: underline;
   text-decoration: underline;
   padding-left: 10px;
+}
+
+.my-profile {
+  display: flex;
+  width: 600px;
+  height: 400px;
+}
+
+.my-profile-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  background: #000;
+}
+
+.my-profile-initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 139px;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+  text-transform: capitalize;
+}
+
+.my-profile-user-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  width: 120px;
+  height: 30px;
+  background: #fff;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.my-profile-right-column {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  align-items: start;
+  width: 430px;
+  background: #fff;
+}
+
+.h3-my-profile {
+  padding-top: 30px;
+  margin-bottom: 40px;
+  /* align-items: left; */
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 50% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.my-profile-list-item-name {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+}
+
+.my-profile-list-count {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 200% */
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.my-profile-list {
+  display: flex;
+  gap: 20px;
+}
+
+.my-profile-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.h4-rented-books {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.my-profile-list-books-item {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  list-style: disc;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.my-profile-list-books {
+  margin-bottom: 40px;
+}
+
+.my-profile-card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+}
+
+.span-my-pofile-card-number {
+  color: #BB945F;
+}
+
+.my-profile-card-number-copy {
+  cursor: pointer;
 }
 
 /* Welcome */
@@ -610,6 +778,7 @@ svg:hover path {
     opacity: 0;
     /* display: none; */
   }
+
   100% {
     opacity: 1;
     /* display: flex; */
@@ -626,6 +795,7 @@ svg:hover path {
     opacity: 1;
     /* display: flex; */
   }
+
   100% {
     opacity: 0;
     /* display: none; */
