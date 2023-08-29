@@ -66,3 +66,77 @@ modalOverlay.addEventListener('click', (e) => {
     });
   }
 });
+
+// Регистрация нового пользователя
+const registerNewUser = document.querySelector('.register-form-btn-submit');
+const registerFirstName = document.querySelector('.register-form-input-firstname');
+const registerSurname = document.querySelector('.register-form-input-surname');
+const registerEmail = document.querySelector('.register-form-input-email');
+const registerPassword = document.querySelector('.register-form-input-password');
+
+registerNewUser.addEventListener('click', () => {
+
+  localStorage.setItem('cardNumber', getRandomNumber());
+  localStorage.setItem('userName', registerFirstName.value);
+  localStorage.setItem('userSurname', registerSurname.value);
+  localStorage.setItem('userEmail', registerEmail.value);
+  localStorage.setItem('userPassword', registerPassword.value);
+  localStorage.setItem('registered', true);
+  localStorage.setItem('active', true);
+  modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('modal--visible');
+    });
+    event.preventDefault();
+    location.reload();
+});
+
+ // Сгенерировать случайное число
+function getRandomNumber() {
+  let hexNumber = (Math.floor(Math.random() * (999_999_999 - 100_000_000) + 100_000_000)).toString(16).toUpperCase();
+  while (hexNumber.length < 9) {
+    hexNumber += '0';
+  }
+  return hexNumber;
+ }
+
+ // Страница после успешного входа в аккаунт
+let activeStatus = localStorage.getItem('active');
+let userEmail = localStorage.getItem('userEmail');
+let userPassword = localStorage.getItem('userPassword');
+
+
+  if (localStorage.getItem('active') == 'true') {
+    document.querySelector('.profile-btn').classList.add('profile-btn-hidden');
+    document.querySelector('.initials').classList.remove('profile-btn-hidden');
+    document.querySelector('.initials').textContent = localStorage.getItem('userName').slice(0, 1).toUpperCase() + localStorage.getItem('userSurname').slice(0, 1).toLocaleUpperCase();
+    document.querySelector('.initials').title = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
+    document.querySelector('.h4-modal--2').textContent = localStorage.getItem('cardNumber');
+  }
+
+ // Вход в учетную запись
+ const loginUser = document.querySelector('.login-form-btn-submit');
+ const loginEmail = document.querySelector('.login-form-input-email');
+ const loginPassword = document.querySelector('.login-form-input-password');
+
+ loginUser.addEventListener('click', () => {
+  if (loginEmail.value == userEmail && loginPassword.value == userPassword) {
+    localStorage.setItem('active', true);
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('modal--visible');
+    });
+    event.preventDefault();
+    location.reload();
+   }
+   location.reload();
+ })
+
+
+ // Выход из учетной записи
+const logOut = document.querySelector('.log-out-btn');
+
+logOut.addEventListener('click', () => {
+  localStorage.setItem('active', false);
+  location.reload();
+})

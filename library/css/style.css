@@ -110,6 +110,23 @@ a:hover {
   padding-left: 40px;
 }
 
+.initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #BB945F;
+  background: #fff;
+}
+
+.profile-btn-hidden {
+  display: none;
+}
+
 svg:hover path {
   fill: #BB945F;
   stroke: #BB945F;
@@ -156,9 +173,10 @@ svg:hover path {
   opacity: 0;
 }
 
-.modal--1 {
+.modal--1,
+.modal--2 {
   position: absolute;
-  top: 80px;
+  top: 59px;
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -171,7 +189,8 @@ svg:hover path {
 }
 
 @media (max-width: 1024px) {
-  .modal--1 {
+  .modal--1,
+  .modal--2 {
     right: 105px;
   }
 }
@@ -195,10 +214,9 @@ svg:hover path {
   padding-bottom: 20px;
   color: #000;
   font-family: Inter;
-  font-size: 15px;
+  line-height: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20px;
   /* 133.333% */
 }
 
@@ -211,6 +229,14 @@ svg:hover path {
   bottom: 9px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.h4-modal--1 {
+  font-size: 15px;
+}
+
+.h4-modal--2 {
+  font-size: 12px;
 }
 
 .modal-profile-btn {
@@ -236,7 +262,7 @@ svg:hover path {
   transition: 0.3s ease-in-out;
 }
 
-.register-form-btn:hover,
+.register-form-btn-submit:hover,
 .login-form-btn:hover {
   cursor: pointer;
   background: #BB945F;
@@ -315,15 +341,15 @@ svg:hover path {
   line-height: normal;
 }
 
-.input-login-form,
-.input-register-form {
+.login-form-input,
+.register-form-input {
   width: 200px;
   height: 20px;
   border: 1px solid #BB945F;
 }
 
 .login-form-btn,
-.register-form-btn {
+.register-form-btn-submit {
   cursor: pointer;
   width: 75px;
   height: 30px;
