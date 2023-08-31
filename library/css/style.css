@@ -427,9 +427,11 @@ svg:hover path {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 15px;
+  padding: 5px 0;
   width: 120px;
-  height: 30px;
+  /* height: 30px; */
   background: #fff;
   color: #000;
   font-family: Inter;
@@ -581,13 +583,13 @@ svg:hover path {
   cursor: pointer;
 }
 
-.buy-subscription {
+.buy-card {
   width: 640px;
   height: 540px;
   background: #fff;
 }
 
-.h3-buy-subscription {
+.h3-buy-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -602,17 +604,95 @@ svg:hover path {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   background: #0C0C0E;
+  margin-bottom: 30px;
 }
 
-.buy-subscription-table {
+.buy-card-table {
   display: flex;
 }
 
-.p-buy-subscription-left-column {
-  width: 300px;
+.buy-card-left-column {
+  padding: 0 40px;
+  /* position: relative; */
 }
 
-.p-buy-subscription-right-column {
+.buy-card-label {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.buy-card-input {
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+}
+
+.p-buy-card-left-column {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.expiration-code {
+  display: flex;
+  gap: 10px;
+}
+
+.expiration-code-input,
+.cvc-input {
+  width: 40px;
+}
+
+.buy-card-form-btn {
+  display: flex;
+  padding-left: 0;
+  justify-content: start;
+  align-items: end;
+  gap: 25px;
+}
+
+.buy-card-btn {
+  width: 75px;
+  height: 30px;
+  /* margin-left: 20px; */
+  position: absolute;
+  bottom: 40px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background: #fff;
+}
+
+.buy-card-btn:hover {
+  cursor: pointer;
+  background: #BB945F;
+  transition: 0.3s ease-in-out;
+}
+
+.buy-card-price {
+  position: absolute;
+  bottom: 40px;
+  left: 140px;
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.p-buy-card-right-column {
   width: 330px;
   color: #8E8E8E;
   font-family: Inter;
@@ -620,7 +700,6 @@ svg:hover path {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* 133.333% */
   letter-spacing: 2px;
 }
 
@@ -1320,7 +1399,7 @@ svg:hover path {
   flex-direction: column;
 }
 
-.h3-chek-the-card-form {
+.h3-check-the-card-form {
   margin: 20px 246px 5px 20px;
   color: #000;
   font-family: Forum;
@@ -1331,7 +1410,7 @@ svg:hover path {
   letter-spacing: 0.6px;
 }
 
-.input-check-the-card-form {
+.check-the-card-form-input {
   margin: 15px 20px 10px 20px;
   width: 520px;
   height: 66px;
@@ -1350,7 +1429,7 @@ svg:hover path {
   padding-left: 20px;
 }
 
-.input-check-the-card-form::placeholder {
+.check-the-card-form-input::placeholder {
   color: #8E8E8E;
   font-family: Forum;
   font-size: 30px;
@@ -1359,6 +1438,56 @@ svg:hover path {
   line-height: 50px;
   letter-spacing: 0.6px;
 }
+
+.check-the-card-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.check-the-card-list {
+  display: flex;
+  gap: 35px;
+}
+
+.check-the-card-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-the-card-list-name {
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.2px;
+text-transform: capitalize;
+}
+
+.check-the-card-list-count {
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.2px;
+text-transform: capitalize;
+}
+
+.check-the-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 
 .btn-check-the-card {
   width: 242px;
