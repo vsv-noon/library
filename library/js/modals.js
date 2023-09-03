@@ -119,6 +119,11 @@ const visitsCount = document.querySelector('.my-profile-list-visits-count');
 const cardNumberField = document.querySelector('.span-my-pofile-card-number');
 const booksCountText = document.querySelector('.my-profile-list-books-count');
 
+const readerName = document.querySelector('.check-the-card-form-input-reader-name');
+const readerCardNumber = document.querySelector('.check-the-card-form-input-card-number');
+const buttonCheckTheCard = document.querySelector('.btn-check-the-card');
+const infoBlockCheckTheCard = document.querySelector('.check-the-card-info-block');
+
 
 if (localStorage.getItem('active') == 'true') {
   document.querySelector('.profile-btn').classList.add('profile-btn-hidden');
@@ -137,12 +142,12 @@ if (localStorage.getItem('active') == 'true') {
     }
   });
 
-  document.querySelector('.check-the-card-form-input-reader-name').value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
-  document.querySelector('.check-the-card-form-input-reader-name').disabled = true;
-  document.querySelector('.check-the-card-form-input-card-number').value = localStorage.getItem('cardNumber');
-  document.querySelector('.check-the-card-form-input-card-number').disabled = true;
-  document.querySelector('.btn-check-the-card').style.display = 'none';
-  document.querySelector('.check-the-card-btn-wrapper').innerHTML = `<ul class="check-the-card-list">
+  readerName.value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
+  readerName.disabled = true;
+  readerCardNumber.value = localStorage.getItem('cardNumber');
+  readerCardNumber.disabled = true;
+  buttonCheckTheCard.style.display = 'none';
+  infoBlockCheckTheCard.innerHTML = `<ul class="check-the-card-list">
     <li class="check-the-card-list-item">
       <span class="check-the-card-list-item-name">Visits</span>
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,5 +284,55 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
     //   event.preventDefault();
     // location.reload();
   });
-}
+};
 
+// Проверка Library card
+
+  buttonCheckTheCard.addEventListener('click', () => {
+    if (readerName.value === localStorage.getItem('userName') && readerCardNumber.value === localStorage.getItem('cardNumber')) {
+      readerName.value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
+      readerName.disabled = true;
+      readerCardNumber.value = localStorage.getItem('cardNumber');
+      readerCardNumber.disabled = true;
+      buttonCheckTheCard.style.display = 'none';
+      infoBlockCheckTheCard.innerHTML = `<ul class="check-the-card-list">
+        <li class="check-the-card-list-item">
+          <span class="check-the-card-list-item-name">Visits</span>
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10.5 10C13.2614 10 15.5 7.76142 15.5 5C15.5 2.23858 13.2614 0 10.5 0C7.73858 0 5.5 2.23858 5.5 5C5.5 7.76142 7.73858 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5L0.5 21C0.5 18.3478 1.55357 15.8043 3.42893 13.9289C5.3043 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z"
+              fill="#BB945F" />
+          </svg>
+          <span class="check-the-card-list-count check-the-card-list-visits-count">${localStorage.getItem('visits')}</span>
+        </li>
+        <li class="check-the-card-list-item">
+          <span class="check-the-card-list-item-name">Bonuses</span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z" fill="#BB945F"/>
+            </svg>
+          <span class="check-the-card-list-count check-the-card-list-bonuses-count">1240</span>
+        </li>
+        <li class="check-the-card-list-item">
+          <span class="check-the-card-list-item-name">Books</span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="21" fill="#BB945F"/>
+            <rect x="2" width="1" height="19" fill="#826844"/>
+            <rect x="1" width="1" height="21" fill="white"/>
+            </svg>
+          <span class="check-the-card-list-count check-the-card-list-books-count">${localStorage.getItem('booksCount')}</span>
+        </li>
+      </ul>`;
+      setTimeout(() => {
+        readerName.value = '';
+        readerName.disabled = false;
+        readerCardNumber.value = '';
+        readerCardNumber.disabled = false;
+        document.querySelector('.check-the-card-list').style.display = 'none';
+        buttonCheckTheCard.style.display = 'block';
+        // location.reload();
+      }, 10000);
+    } else {
+      readerName.value = '';
+      readerCardNumber.value = '';
+    }
+  })

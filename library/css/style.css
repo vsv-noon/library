@@ -1377,6 +1377,9 @@ svg:hover path {
 }
 
 .check-the-card-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 600px;
   height: 386px;
   flex-shrink: 0;
@@ -1439,57 +1442,9 @@ svg:hover path {
   letter-spacing: 0.6px;
 }
 
-.check-the-card-btn-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.check-the-card-list {
-  display: flex;
-  gap: 35px;
-}
-
-.check-the-card-list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.check-the-card-list-name {
-  color: #000;
-text-align: center;
-font-family: Inter;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0.2px;
-text-transform: capitalize;
-}
-
-.check-the-card-list-count {
-  color: #000;
-text-align: center;
-font-family: Inter;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0.2px;
-text-transform: capitalize;
-}
-
-.check-the-list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-
 .btn-check-the-card {
+  /* display: flex; */
+  text-align: center;
   width: 242px;
   height: 44px;
   padding: 10px 0;
@@ -1510,6 +1465,55 @@ text-transform: capitalize;
   cursor: pointer;
   background: #BB945F;
   transition: 0.3s ease-in-out;
+}
+
+.check-the-card-info-block {
+  display: flex;
+  justify-content: center;
+}
+
+.check-the-card-list {
+  display: flex;
+  gap: 35px;
+}
+
+.check-the-card-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-the-card-list-name {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.check-the-card-list-count {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.check-the-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .library-card-box-right-column {
