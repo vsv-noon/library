@@ -69,7 +69,7 @@
             </button>
             <form action="#" class="login-form">
               <h4 class="h4-login-form">E-mail or readers card</h4>
-              <input type="email" class="login-form-input login-form-input-email">
+              <input type="email" class="login-form-input login-form-input-email" required>
               <h4 class="h4-login-form">Password</h4>
               <input type="password" class="login-form-input login-form-input-password" required>
               <button class="login-form-btn login-form-btn-submit">Log In</button>
@@ -92,14 +92,13 @@
             <!-- </div> -->
             <form action="#" class="register-form">
               <h4 class="h4-register-form">First name</h4>
-              <input type="text" class="register-form-input register-form-input-firstname" required>
+              <input type="text" class="register-form-input register-form-input-firstname" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
               <h4 class="h4-register-form">Last name</h4>
-              <input type="text" class="register-form-input register-form-input-surname" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and -"
-              required>
+              <input type="text" class="register-form-input register-form-input-surname" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
               <h4 class="h4-register-form">E-mail</h4>
-              <input type="email" class="register-form-input register-form-input-email">
+              <input type="email" class="register-form-input register-form-input-email" required>
               <h4 class="h4-register-form">Password</h4>
-              <input type="password" class="register-form-input register-form-input-password">
+              <input type="password" class="register-form-input register-form-input-password" minlength="8" required>
               <button class="register-form-btn-submit">Sign Up</button>
             </form>
             <div class="footer-register-form">

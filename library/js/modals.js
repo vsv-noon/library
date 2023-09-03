@@ -75,24 +75,31 @@ const registerEmail = document.querySelector('.register-form-input-email');
 const registerPassword = document.querySelector('.register-form-input-password');
 
 registerNewUser.addEventListener('click', () => {
+  if (registerFirstName.value.length > 0 && registerSurname.value.length > 0 && registerEmail.value.length > 0 && registerPassword.value.length >= 8) {
 
-  localStorage.setItem('cardNumber', getRandomNumber());
-  localStorage.setItem('userName', registerFirstName.value);
-  localStorage.setItem('userSurname', registerSurname.value);
-  localStorage.setItem('userEmail', registerEmail.value);
-  localStorage.setItem('userPassword', registerPassword.value);
-  localStorage.setItem('registered', true);
-  localStorage.setItem('active', true);
-  localStorage.setItem('visits', 1);
-  localStorage.setItem('buyCard', false);
-  localStorage.setItem('booksCount', 0);
-  modalOverlay.classList.remove('modal-overlay--visible');
-  modals.forEach((el) => {
-    el.classList.remove('modal--visible');
-  });
-  event.preventDefault();
-  location.reload();
+    localStorage.setItem('cardNumber', getRandomNumber());
+    localStorage.setItem('userName', registerFirstName.value);
+    localStorage.setItem('userSurname', registerSurname.value);
+    localStorage.setItem('userEmail', registerEmail.value);
+    localStorage.setItem('userPassword', registerPassword.value);
+    localStorage.setItem('registered', true);
+    localStorage.setItem('active', true);
+    localStorage.setItem('visits', 1);
+    localStorage.setItem('buyCard', false);
+    localStorage.setItem('booksCount', 0);
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('modal--visible');
+    });
+    event.preventDefault();
+    location.reload();
+  }
 });
+// } else {
+// window.alert('Please, fill all fields');
+
+
+
 
 // Сгенерировать случайное число
 function getRandomNumber() {
@@ -189,8 +196,10 @@ loginUser.addEventListener('click', () => {
     });
     event.preventDefault();
     location.reload();
+  } else {
+    // window.alert('Fill all fields, please!');
   }
-  location.reload();
+  // location.reload();
 })
 
 
