@@ -25,16 +25,32 @@
 //   }
 // });
 
+const profileIconButton = document.querySelector('.profile-svg-btn');
+const profileIconHiddenButton = document.querySelector('.profile-svg-hidden-btn');
 const btns = document.querySelectorAll('.modal-btn');
 const modalOverlay = document.querySelector('.modal-overlay ');
+const modalProfileOverlay = document.querySelector('.modal-profile-overlay');
 const modals = document.querySelectorAll('.modal');
 const hamburger = document.querySelector('.menu-toggle');
 
 const closeBtn = document.querySelectorAll('.close-btn');
 
+profileIconButton.addEventListener('click', () => {
+  document.querySelector('.modal--1').classList.toggle('modal--visible');
+  // modalOverlay.style.background = 'none';
+  modalOverlay.classList.toggle('modal-overlay--visible');
+});
+
+profileIconHiddenButton.addEventListener('click', () => {
+  document.querySelector('.modal--2').classList.toggle('modal--visible');
+  // modalOverlay.style.background = 'none';
+  modalOverlay.classList.toggle('modal-overlay--visible');
+})
+
 closeBtn.forEach((el) => {
   el.addEventListener('click', (el) => {
     modalOverlay.classList.remove('modal-overlay--visible');
+    document.body.style.overflow = '';
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
     });
@@ -44,6 +60,7 @@ closeBtn.forEach((el) => {
 btns.forEach((el) => {
   el.addEventListener('click', (e) => {
     let path = e.currentTarget.getAttribute('data-path');
+    console.log(path);
 
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
@@ -53,6 +70,8 @@ btns.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
     modalOverlay.classList.add('modal-overlay--visible');
+    modalOverlay.style.background = 'rgba(0, 0, 0, 0.7)';
+    document.body.style.overflow = 'hidden';
   });
 });
 
@@ -61,6 +80,7 @@ modalOverlay.addEventListener('click', (e) => {
 
   if (e.target == modalOverlay || e.target == hamburger) {
     modalOverlay.classList.remove('modal-overlay--visible');
+    document.body.style.overflow = '';
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
     });
@@ -202,7 +222,7 @@ loginUser.addEventListener('click', () => {
     event.preventDefault();
     location.reload();
   } else {
-    // window.alert('Fill all fields, please!');
+    window.alert('User not found!');
   }
   // location.reload();
 })
@@ -229,7 +249,7 @@ copy.addEventListener('click', () => {
 // Купить Library Card
 const buyLibraryCardFieldCardNumber = document.querySelector('#bank-card-number');
 const expirationCodeMonth = document.querySelector('#expiration-code-month');
-const expirationCodeYear = document.querySelector('#expiration-code-yeare');
+const expirationCodeYear = document.querySelector('#expiration-code-year');
 
 buyLibraryCardFieldCardNumber.addEventListener('input', function (event) {
   const input = event.target;
@@ -243,15 +263,17 @@ buyLibraryCardFieldCardNumber.addEventListener('input', function (event) {
 document.querySelector('.buy-card-btn').addEventListener('click', () => {
   if (buyLibraryCardFieldCardNumber.value.length === 16 && typeof (+buyLibraryCardFieldCardNumber.value) == 'number'
     && expirationCodeMonth.value.length === 2
-    && expirationCodeYear === 2) {
+    && expirationCodeYear.value.length === 2) {
     localStorage.setItem('buyCard', true);
-    localStorage.setItem('booksCount', +localStorage.getItem('booksCount') + 1);
+    localStorage.setItem('booksCount', +localStorage.getItem('booksCount') + 0);
     modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
     });
     event.preventDefault();
     location.reload();
+  } else {
+    window.alert('Please, fill all fields');
   }
 
 });
@@ -270,6 +292,8 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
 
       document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
       modalOverlay.classList.add('modal-overlay--visible');
+      modalOverlay.style.background = 'rgba(0, 0, 0, 0.7)';
+      document.body.style.overflow = 'hidden';
     });
   });
 } else {
@@ -296,7 +320,7 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
       document.querySelector('.my-profile-list-books').prepend(li);
 
       event.preventDefault();
-      location.reload();
+      // location.reload();
     });
     // localStorage.setItem('booksCount', +localStorage.getItem('bookCount') + 1);
     //   event.preventDefault();
@@ -347,6 +371,7 @@ buttonCheckTheCard.addEventListener('click', () => {
       readerCardNumber.disabled = false;
       document.querySelector('.check-the-card-list').style.display = 'none';
       buttonCheckTheCard.style.display = 'block';
+      event.preventDefault();
       // location.reload();
     }, 10000);
   } else {
