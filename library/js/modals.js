@@ -227,15 +227,33 @@ copy.addEventListener('click', () => {
 });
 
 // Купить Library Card
+const buyLibraryCardFieldCardNumber = document.querySelector('#bank-card-number');
+const expirationCodeMonth = document.querySelector('#expiration-code-month');
+const expirationCodeYear = document.querySelector('#expiration-code-yeare');
+
+buyLibraryCardFieldCardNumber.addEventListener('input', function (event) {
+  const input = event.target;
+  if (input.value.length < 16) {
+    input.setCustomValidity('16');
+  } else {
+    input.setCustomValidity('');
+  }
+})
+
 document.querySelector('.buy-card-btn').addEventListener('click', () => {
-  localStorage.setItem('buyCard', true);
-  localStorage.setItem('booksCount', +localStorage.getItem('booksCount') + 1);
-  modalOverlay.classList.remove('modal-overlay--visible');
-  modals.forEach((el) => {
-    el.classList.remove('modal--visible');
-  });
-  event.preventDefault();
-  location.reload();
+  if (buyLibraryCardFieldCardNumber.value.length === 16 && typeof (+buyLibraryCardFieldCardNumber.value) == 'number'
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear === 2) {
+    localStorage.setItem('buyCard', true);
+    localStorage.setItem('booksCount', +localStorage.getItem('booksCount') + 1);
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('modal--visible');
+    });
+    event.preventDefault();
+    location.reload();
+  }
+
 });
 
 // Купить книгу
@@ -288,14 +306,14 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
 
 // Проверка Library card
 
-  buttonCheckTheCard.addEventListener('click', () => {
-    if (readerName.value === localStorage.getItem('userName') && readerCardNumber.value === localStorage.getItem('cardNumber')) {
-      readerName.value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
-      readerName.disabled = true;
-      readerCardNumber.value = localStorage.getItem('cardNumber');
-      readerCardNumber.disabled = true;
-      buttonCheckTheCard.style.display = 'none';
-      infoBlockCheckTheCard.innerHTML = `<ul class="check-the-card-list">
+buttonCheckTheCard.addEventListener('click', () => {
+  if (readerName.value === localStorage.getItem('userName') && readerCardNumber.value === localStorage.getItem('cardNumber')) {
+    readerName.value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
+    readerName.disabled = true;
+    readerCardNumber.value = localStorage.getItem('cardNumber');
+    readerCardNumber.disabled = true;
+    buttonCheckTheCard.style.display = 'none';
+    infoBlockCheckTheCard.innerHTML = `<ul class="check-the-card-list">
         <li class="check-the-card-list-item">
           <span class="check-the-card-list-item-name">Visits</span>
           <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -322,17 +340,17 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
           <span class="check-the-card-list-count check-the-card-list-books-count">${localStorage.getItem('booksCount')}</span>
         </li>
       </ul>`;
-      setTimeout(() => {
-        readerName.value = '';
-        readerName.disabled = false;
-        readerCardNumber.value = '';
-        readerCardNumber.disabled = false;
-        document.querySelector('.check-the-card-list').style.display = 'none';
-        buttonCheckTheCard.style.display = 'block';
-        // location.reload();
-      }, 10000);
-    } else {
+    setTimeout(() => {
       readerName.value = '';
+      readerName.disabled = false;
       readerCardNumber.value = '';
-    }
-  })
+      readerCardNumber.disabled = false;
+      document.querySelector('.check-the-card-list').style.display = 'none';
+      buttonCheckTheCard.style.display = 'block';
+      // location.reload();
+    }, 10000);
+  } else {
+    readerName.value = '';
+    readerCardNumber.value = '';
+  }
+})
