@@ -695,6 +695,12 @@ svg:hover path {
   transition: 0.3s ease-in-out;
 }
 
+.buy-card-btn-disabled {
+  color: gray;
+  border: solid 1px gray;
+  pointer-events: none;
+}
+
 .buy-card-price {
   position: absolute;
   bottom: 40px;

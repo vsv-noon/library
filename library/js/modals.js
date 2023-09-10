@@ -254,15 +254,110 @@ copy.addEventListener('click', () => {
 const buyLibraryCardFieldCardNumber = document.querySelector('#bank-card-number');
 const expirationCodeMonth = document.querySelector('#expiration-code-month');
 const expirationCodeYear = document.querySelector('#expiration-code-year');
+const cvc = document.querySelector('#cvc');
+const cardHolderName = document.querySelector('#cardholder-name');
+const postalCode = document.querySelector('#postal-code');
+const city = document.querySelector('#city-name');
 
-buyLibraryCardFieldCardNumber.addEventListener('input', function (event) {
-  const input = event.target;
-  if (input.value.length < 16) {
-    input.setCustomValidity('16');
+const buyCardButton = document.querySelector('.buy-card-btn')
+
+buyLibraryCardFieldCardNumber.addEventListener('input', function () {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
   } else {
-    input.setCustomValidity('');
+    buyCardButton.classList.add('buy-card-btn-disabled');
   }
-})
+});
+
+expirationCodeMonth.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
+
+expirationCodeYear.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
+
+cvc.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
+
+cardHolderName.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
+
+postalCode.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
+
+city.addEventListener('input', () => {
+  if (buyLibraryCardFieldCardNumber.value.length === 16
+    && expirationCodeMonth.value.length === 2
+    && expirationCodeYear.value.length === 2
+    && cvc.value.length === 3
+    && cardHolderName.value.length > 0
+    && postalCode.value.length > 0
+    && city.value.length > 0) {
+    buyCardButton.classList.remove('buy-card-btn-disabled');
+  } else {
+    buyCardButton.classList.add('buy-card-btn-disabled');
+  }
+});
 
 document.querySelector('.buy-card-btn').addEventListener('click', () => {
   if (buyLibraryCardFieldCardNumber.value.length === 16 && typeof (+buyLibraryCardFieldCardNumber.value) == 'number'
@@ -278,7 +373,7 @@ document.querySelector('.buy-card-btn').addEventListener('click', () => {
     event.preventDefault();
     location.reload();
   } else {
-    window.alert('Please, fill all fields');
+    // window.alert('Please, fill all fields');
   }
 
 });
@@ -336,7 +431,13 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
 // Проверка Library card
 
 buttonCheckTheCard.addEventListener('click', () => {
-  if (readerName.value === localStorage.getItem('userName') && readerCardNumber.value === localStorage.getItem('cardNumber')) {
+  if (localStorage.getItem(userEmail) === '') {
+    buttonCheckTheCard.disabled = true;
+  }
+
+  if ((readerName.value.trim().toLowerCase() === localStorage.getItem('userName').toLowerCase() && readerCardNumber.value === localStorage.getItem('cardNumber'))
+    || (readerName.value.trim().toLowerCase() === localStorage.getItem('userSurname').toLowerCase() && readerCardNumber.value === localStorage.getItem('cardNumber'))
+    || (readerName.value.replace(/\s+/g, ' ').trim().toLowerCase() === localStorage.getItem('userName').toLowerCase() + " " + localStorage.getItem('userSurname').toLowerCase() && readerCardNumber.value === localStorage.getItem('cardNumber'))) {
     readerName.value = localStorage.getItem('userName') + ' ' + localStorage.getItem('userSurname');
     readerName.disabled = true;
     readerCardNumber.value = localStorage.getItem('cardNumber');
@@ -376,7 +477,7 @@ buttonCheckTheCard.addEventListener('click', () => {
       readerCardNumber.disabled = false;
       document.querySelector('.check-the-card-list').style.display = 'none';
       buttonCheckTheCard.style.display = 'block';
-      event.preventDefault();
+      // event.preventDefault();
       // location.reload();
     }, 10000);
   } else {

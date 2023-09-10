@@ -69,9 +69,9 @@
             </button>
             <form action="#" class="login-form">
               <h4 class="h4-login-form">E-mail or readers card</h4>
-              <input type="email" class="login-form-input login-form-input-email" required>
+              <input type="email" class="login-form-input login-form-input-email" autocomplete="off" required>
               <h4 class="h4-login-form">Password</h4>
-              <input type="password" class="login-form-input login-form-input-password" minlength="8" title="Min length 8 symbols." required>
+              <input type="password" class="login-form-input login-form-input-password" autocomplete="off" minlength="8" title="Min length 8 symbols." required>
               <button class="login-form-btn login-form-btn-submit">Log In</button>
             </form>
             <div class="footer-login-form">
@@ -92,13 +92,13 @@
             <!-- </div> -->
             <form action="#" class="register-form">
               <h4 class="h4-register-form">First name</h4>
-              <input type="text" class="register-form-input register-form-input-firstname" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
+              <input type="text" class="register-form-input register-form-input-firstname" autocomplete="off" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
               <h4 class="h4-register-form">Last name</h4>
-              <input type="text" class="register-form-input register-form-input-surname" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
+              <input type="text" class="register-form-input register-form-input-surname" autocomplete="off" pattern="^[a-zA-Z]+$" title="please enter only letters" required>
               <h4 class="h4-register-form">E-mail</h4>
-              <input type="email" class="register-form-input register-form-input-email" required>
+              <input type="email" class="register-form-input register-form-input-email" autocomplete="off" required>
               <h4 class="h4-register-form">Password</h4>
-              <input type="password" class="register-form-input register-form-input-password" minlength="8" title="Min length 8 symbols." required>
+              <input type="password" class="register-form-input register-form-input-password" autocomplete="off" minlength="8" title="Min length 8 symbols." required>
               <button class="register-form-btn-submit">Sign Up</button>
             </form>
             <div class="footer-register-form">
@@ -184,33 +184,33 @@
                 <form action="" class="buy-card-form">
                   <label for="bank-card-number" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">Bank card number</span>
-                    <input class="buy-card-input" type="text" id="bank-card-number" minlength="16" maxlength="16" title="Enter 16 digits" required>
+                    <input class="buy-card-input" type="text" id="bank-card-number" autocomplete="off" minlength="16" maxlength="16" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" title="Enter 16 digits" required>
                   </label>
                   <label for="expiration-code" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">Expiration code</span>
                     <div class="expiration-code">
-                      <input class="buy-card-input expiration-code-input" type="text" id="expiration-code-month">
-                      <input class="buy-card-input expiration-code-input" type="text" id="expiration-code-year">
+                      <input class="buy-card-input expiration-code-input" type="text" id="expiration-code-month" autocomplete="off" minlength="2" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" title="Enter 2 digits" required>
+                      <input class="buy-card-input expiration-code-input" type="text" id="expiration-code-year" autocomplete="off" minlength="2" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" title="Enter 2 digits" required>
                     </div>
                   </label>
                   <label for="cvc" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">CVC</span>
-                    <input class="buy-card-input cvc-input" type="text" id="cvc">
+                    <input class="buy-card-input cvc-input" type="text" id="cvc" autocomplete="off" minlength="3" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" title="Enter 3 digits" required>
                   </label>
                   <label for="cardholder-name" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">Cardholder name</span>
-                    <input class="buy-card-input cardholder-name-input" type="text" id="cardholder-name">
+                    <input class="buy-card-input cardholder-name-input" type="text" id="cardholder-name" autocomplete="off" oninput="this.value = this.value.replace(/[^a-zа-я]/gi, '').replace(/(\..*?)\..*/g, '$1');" title="Please, enter only letters" required>
                   </label>
                   <label for="postal-code" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">Postal code</span>
-                    <input class="buy-card-input cardholder-name-input" type="text" id="postal-code">
+                    <input class="buy-card-input cardholder-name-input" type="text" id="postal-code" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" title="Plese, enter only numbers" required>
                   </label>
                   <label for="city-name" class="buy-card-label bank-card-number">
                     <span class="p-buy-card-left-column">City / Town</span>
-                    <input class="buy-card-input city-name-input" type="text" id="city-name">
+                    <input class="buy-card-input city-name-input" type="text" id="city-name" autocomplete="off" oninput="this.value = this.value.replace(/[^a-zа-я]/gi, '').replace(/(\..*?)\..*/g, '$1');" title="Please, enter only letters" required>
                   </label>
                   <div class="buy-card-form-btn">
-                    <button class="buy-card-btn" type="button" data-path="form-login">Buy</button>
+                    <button class="buy-card-btn buy-card-btn-disabled" type="button" data-path="form-login">Buy</button>
                     <span class="buy-card-price">$ 25.00</span>
                   </div>
                 </form>
@@ -650,11 +650,11 @@
             <div class="check-the-card-form-inner-block">
               <h3 class="h3-check-the-card-form">Brooklyn Public Library</h3>
               <input class="check-the-card-form-input check-the-card-form-input-reader-name" type="text"
-                placeholder="Reader's name" pattern="^[a-zA-Z0-9\-\s]+$"
-                title="please enter only letters, numbers and -" required>
+                placeholder="Reader's name" autocomplete="off" pattern="^[a-zA-Z0-9\-\s]+$"
+                title="please enter only letters, numbers and">
               <input class="check-the-card-form-input check-the-card-form-input-card-number" type="text"
-                placeholder="Card number" pattern="^[a-zA-Z0-9\-\s]+$" title="please enter only letters, numbers and -"
-                required>
+                placeholder="Card number" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9a-z]/gi, '').replace(/(\..*?)\..*/g, '$1');" title="Please, enter only letters, numbers"
+                >
             </div>
             <div class="check-the-card-info-block">
               <!-- <button class="btn-check-the-card">Check the card</button> -->
