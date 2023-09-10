@@ -20,6 +20,5 @@ radioButtons.forEach((item) => {
     // document.querySelector(`.favorites-box-wrapper [data-visible="${e.currentTarget.dataset.visible}"]`).classList.remove('hidden');
     // document.querySelector(`.favorites-box-wrapper [data-visible="${e.currentTarget.dataset.visible}"]`).classList.add('season-animation');
     // document.querySelector(`.favorites-box-wrapper [data-visible="${e.currentTarget.dataset.visible}"]`).classList.remove('season-hide-animation');
-
    })
   });
