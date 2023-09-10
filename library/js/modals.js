@@ -1,30 +1,3 @@
-// const btns = document.querySelectorAll('.btn');
-// const modalOverlay = document.querySelector('.modal-overlay');
-// const modals = document.querySelectorAll('.modal');
-
-// btns.forEach((el) => {
-//   el.addEventListener('click', (e) => {
-//     let path = e.currentTarget.getAttribute('data-path');
-//     modals.forEach((el) => {
-//       el.classList.remove('modal--visible');
-//     });
-
-//     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-//     modalOverlay.classList.add('modal-overlay--visible');
-//   })
-
-// })
-
-// modalOverlay.addEventListener('click', (e) => {
-//   console.log(e.target);
-//   if (e.target == modalOverlay) {
-//     modalOverlay.classList.remove('modal-overlay--visible');
-//     modals.forEach((el) => {
-//       el.classList.remove('modal--visible');
-//     });
-//   }
-// });
-
 const profileIconButton = document.querySelector('.profile-svg-btn');
 const profileIconHiddenButton = document.querySelector('.profile-svg-hidden-btn');
 const btns = document.querySelectorAll('.modal-btn');
@@ -38,7 +11,7 @@ const closeBtn = document.querySelectorAll('.close-btn');
 profileIconButton.addEventListener('click', () => {
   document.querySelector('.modal--1').classList.toggle('modal--visible');
   // modalOverlay.style.background = 'none';
-  modalOverlay.classList.toggle('modal-overlay--visible');
+  modalOverlay.classList.add('modal-overlay--visible');
 });
 
 profileIconHiddenButton.addEventListener('click', () => {
@@ -431,9 +404,10 @@ if (localStorage.getItem('active') == 'false' || localStorage.getItem('buyCard')
 // Проверка Library card
 
 buttonCheckTheCard.addEventListener('click', () => {
-  if (localStorage.getItem(userEmail) === '') {
-    buttonCheckTheCard.disabled = true;
-  }
+  event.preventDefault();
+  // if (localStorage.getItem(userEmail) === '') {
+  //   buttonCheckTheCard.disabled = true;
+  // }
 
   if ((readerName.value.trim().toLowerCase() === localStorage.getItem('userName').toLowerCase() && readerCardNumber.value === localStorage.getItem('cardNumber'))
     || (readerName.value.trim().toLowerCase() === localStorage.getItem('userSurname').toLowerCase() && readerCardNumber.value === localStorage.getItem('cardNumber'))
@@ -477,8 +451,6 @@ buttonCheckTheCard.addEventListener('click', () => {
       readerCardNumber.disabled = false;
       document.querySelector('.check-the-card-list').style.display = 'none';
       buttonCheckTheCard.style.display = 'block';
-      // event.preventDefault();
-      // location.reload();
     }, 10000);
   } else {
     readerName.value = '';
