@@ -1,0 +1,4 @@
+- [Landing page](https://vsv-an.github.io/school-projects/library/)
+- [Audio player](https://vsv-an.github.io/school-projects/audio-player/)
+- [Image gallery](https://vsv-an.github.io/school-projects/image-gallery/)
+- [Random game(Minesweeper)](https://vsv-an.github.io/school-projects/random-game/)
